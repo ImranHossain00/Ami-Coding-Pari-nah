@@ -13,7 +13,7 @@
 <body>
 
     <h1>Celsius to Fahrenheit conversion</h1>
-    <form method="post" action="/home">
+    <form method="post" action="/convert">
         <input type="number" name="temperature">
         <input type="submit" value="Submit">
     </form>
