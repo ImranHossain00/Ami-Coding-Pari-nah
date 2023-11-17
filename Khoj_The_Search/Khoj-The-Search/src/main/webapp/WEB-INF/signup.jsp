@@ -15,7 +15,7 @@
             <input type="text" class="form-control"
                    id="username"
                    name="username"
-                   placeholder="/"/>
+                   placeholder=""/>
         </div>
         <div class="form-group">
             <label for="password">Password</label>

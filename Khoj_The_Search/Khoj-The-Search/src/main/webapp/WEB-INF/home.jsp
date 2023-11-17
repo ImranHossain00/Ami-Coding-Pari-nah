@@ -2,17 +2,29 @@
 <%@include file="includes/navigation.jsp"%>
 <div class="container">
 
-    <h1>Celsius to Fahrenheit conversion</h1>
+    <h1>Khoj The Search</h1>
     <form class="form-horizontal" role="form"
           method="post"
           action="<c:url value="/home"/>">
         <div class="form-group">
-            <label for="celsius">Temperature in Celsius</label>
+            <label for="inputvalues">
+                Input values
+            </label>
             <input type="number"
-                   id="celsius"
-                   name="temperature"/>
+                   class="form-control"
+                   id="inputvalues"
+                   name="inputvalues"/>
         </div>
-        <input type="submit" value="Submit">
+        <div class="form-group">
+            <label for="search">
+                Search
+            </label>
+            <input type="number"
+                   class="form-control"
+                   id="search"
+                   name="search"/>
+        </div>
+        <input type="submit" value="Khoj">
     </form>
 </div>
 <%@include file="includes/footer.jsp"%>
