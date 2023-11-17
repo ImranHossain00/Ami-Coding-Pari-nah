@@ -19,4 +19,20 @@ public class Home extends HttpServlet {
         RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/home.jsp");
         rd.forward(req, resp);
     }
+
+    @Override
+    protected void doPost(HttpServletRequest req,
+                          HttpServletResponse resp)
+            throws ServletException, IOException {
+        var temperature = req.getParameter("temperature");
+        if (temperature != null && temperature.length() > 0) {
+            double temInC = Double.parseDouble(temperature);
+            double temInF = (temInC * 9 / 5) + 32;
+
+            req.setAttribute("ans", temInF);
+        }
+
+        RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/result.jsp");
+        rd.forward(req, resp);
+    }
 }

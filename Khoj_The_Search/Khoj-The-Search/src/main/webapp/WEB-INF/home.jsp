@@ -1,21 +1,18 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: peripatetic
-  Date: 11/16/23
-  Time: 11:06 PM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Temperature Converter</title>
-</head>
-<body>
+<%@include file="includes/header.jsp"%>
+<%@include file="includes/navigation.jsp"%>
+<div class="container">
 
     <h1>Celsius to Fahrenheit conversion</h1>
-    <form method="post" action="/convert">
-        <input type="number" name="temperature">
+    <form class="form-horizontal" role="form"
+          method="post"
+          action="<c:url value="/home"/>">
+        <div class="form-group">
+            <label for="celsius">Temperature in Celsius</label>
+            <input type="number"
+                   id="celsius"
+                   name="temperature"/>
+        </div>
         <input type="submit" value="Submit">
     </form>
-</body>
-</html>
+</div>
+<%@include file="includes/footer.jsp"%>
