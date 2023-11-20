@@ -1,8 +1,15 @@
 package com.imran.dto;
 
+import com.imran.annotations.PasswordEqual;
+
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
+@PasswordEqual(
+        first = "password",
+        second = "confirmPassword",
+        message = "password and confirm password do not match"
+)
 public class UserDTO {
     @NotEmpty
     @Size(min = 6, max = 32)

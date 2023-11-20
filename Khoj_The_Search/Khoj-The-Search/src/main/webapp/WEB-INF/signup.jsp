@@ -42,23 +42,10 @@
         <hr class="mb-4">
         <div class="form-group">
             <button class="btn btn-primary btn-lg"
-                    type="submit"
-                    onclick="return validatePassword()">
+                    type="submit">
                 Signup
             </button>
         </div>
     </form>
 </div>
-<script type="text/javascript">
-    function validatePassword() {
-        var password = document.getElementById("password").value;
-        var confirmPassword = document.getElementById("confirmPassword").value;
-        if (password !== confirmPassword)
-        {
-            alert("Password do not match");
-            return false;
-        }
-        return true;
-    }
-</script>
 <%@include file="includes/footer.jsp"%>
