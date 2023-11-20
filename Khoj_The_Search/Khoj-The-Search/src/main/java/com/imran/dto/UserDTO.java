@@ -1,9 +1,18 @@
 package com.imran.dto;
 
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
+
 public class UserDTO {
+    @NotEmpty
+    @Size(min = 6, max = 32)
     private String username;
+    @NotEmpty
+    @Size(min = 8, max = 32)
     private String password;
-    private String confirmpassword;
+    @NotEmpty
+    @Size(min = 8, max = 32)
+    private String confirmPassword;
 
     public String getUsername() {
         return username;
@@ -21,11 +30,11 @@ public class UserDTO {
         this.password = password;
     }
 
-    public String getConfirmpassword() {
-        return confirmpassword;
+    public String getConfirmPassword() {
+        return confirmPassword;
     }
 
-    public void setConfirmpassword(String confirmpassword) {
-        this.confirmpassword = confirmpassword;
+    public void setConfirmPassword(String confirmPassword) {
+        this.confirmPassword = confirmPassword;
     }
 }

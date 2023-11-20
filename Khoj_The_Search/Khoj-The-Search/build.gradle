@@ -18,6 +18,7 @@ dependencies {
     implementation 'org.webjars:bootstrap:4.5.3'
     implementation 'jstl:jstl:1.2'
     implementation 'ch.qos.logback:logback-classic:1.4.11'
+    implementation 'org.hibernate.validator:hibernate-validator:6.2.5.Final'
 }
 test {
     useJUnitPlatform()

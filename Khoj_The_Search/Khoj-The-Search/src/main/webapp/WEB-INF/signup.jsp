@@ -24,18 +24,31 @@
                    name="password"/>
         </div>
         <div class="form-group">
-            <label for="confirmpassword">Confirm Password</label>
+            <label for="confirmPassword">Confirm Password</label>
             <input type="password" class="form-control"
-                   id="confirmpassword"
-                   name="confirmpassword"/>
+                   id="confirmPassword"
+                   name="confirmPassword"/>
         </div>
         <hr class="mb-4">
         <div class="form-group">
             <button class="btn btn-primary btn-lg"
-                    type="submit">
+                    type="submit"
+                    onclick="return validatePassword()">
                 Signup
             </button>
         </div>
     </form>
 </div>
+<script type="text/javascript">
+    function validatePassword() {
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirmPassword").value;
+        if (password != confirmPassword)
+        {
+            alert("Password do not match");
+            return false;
+        }
+        return true;
+    }
+</script>
 <%@include file="includes/footer.jsp"%>
