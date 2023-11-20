@@ -14,6 +14,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.validation.ConstraintViolation;
 import javax.validation.Validation;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
 
 @WebServlet("/signup")
@@ -34,10 +36,12 @@ public class Signup extends HttpServlet {
                           HttpServletResponse resp)
             throws ServletException, IOException {
         UserDTO userDTO = copyParamerters(req);
-        if (isValid(userDTO)) {
+        Map<String, String> errors = validate(userDTO);
+        if (errors.isEmpty()) {
             userService.saveUser(userDTO);
             resp.sendRedirect("/home");
         } else {
+            req.setAttribute("errors", errors);
             req.getRequestDispatcher("/WEB-INF/signup.jsp")
                     .forward(req, resp);
         }
@@ -54,7 +58,7 @@ public class Signup extends HttpServlet {
         return userDTO;
     }
 
-    private boolean isValid(UserDTO userDTO) {
+    private Map<String, String> validate(UserDTO userDTO) {
         var validatorFactory
                 = Validation.buildDefaultValidatorFactory();
         var validator
@@ -62,6 +66,18 @@ public class Signup extends HttpServlet {
 
         Set<ConstraintViolation<UserDTO>> violations
                 = validator.validate(userDTO);
-        return violations.isEmpty();
+
+        Map<String, String> errors = new HashMap<>();
+
+        for (ConstraintViolation<UserDTO> violation : violations) {
+            String path = violation.getPropertyPath().toString();
+            if (errors.containsKey(path)) {
+                String eMsg = errors.get(path);
+                errors.put(path, eMsg + " <br/> " + violation.getMessage());
+            } else {
+                errors.put(path, violation.getMessage());
+            }
+        }
+        return errors;
     }
 }

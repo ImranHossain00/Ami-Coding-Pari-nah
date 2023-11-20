@@ -16,18 +16,28 @@
                    id="username"
                    name="username"
                    placeholder=""/>
+
+            <c:if test="${errors.username != null}">
+                <small class="text-danger"> ${errors.username} </small>
+            </c:if>
         </div>
         <div class="form-group">
             <label for="password">Password</label>
             <input type="password" class="form-control"
                    id="password"
                    name="password"/>
+            <c:if test="${errors.password != null}">
+                <small class="text-danger"> ${errors.password} </small>
+            </c:if>
         </div>
         <div class="form-group">
             <label for="confirmPassword">Confirm Password</label>
             <input type="password" class="form-control"
                    id="confirmPassword"
                    name="confirmPassword"/>
+            <c:if test="${errors.confirmPassword != null}">
+                <small class="text-danger"> ${errors.confirmPassword} </small>
+            </c:if>
         </div>
         <hr class="mb-4">
         <div class="form-group">
@@ -43,7 +53,7 @@
     function validatePassword() {
         var password = document.getElementById("password").value;
         var confirmPassword = document.getElementById("confirmPassword").value;
-        if (password != confirmPassword)
+        if (password !== confirmPassword)
         {
             alert("Password do not match");
             return false;
