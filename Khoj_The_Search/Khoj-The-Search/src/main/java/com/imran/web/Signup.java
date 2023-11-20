@@ -4,6 +4,7 @@ import com.imran.dto.UserDTO;
 import com.imran.repository.JDBCUserRepositoryImpl;
 import com.imran.service.UserService;
 import com.imran.service.UserServiceImpl;
+import com.imran.util.ValidationUtil;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -36,7 +37,7 @@ public class Signup extends HttpServlet {
                           HttpServletResponse resp)
             throws ServletException, IOException {
         UserDTO userDTO = copyParamerters(req);
-        Map<String, String> errors = validate(userDTO);
+        Map<String, String> errors = ValidationUtil.getInstance().validate(userDTO);
         if (errors.isEmpty()) {
             userService.saveUser(userDTO);
             resp.sendRedirect("/home");
@@ -56,28 +57,5 @@ public class Signup extends HttpServlet {
         userDTO.setPassword(req.getParameter("password"));
         userDTO.setConfirmPassword(req.getParameter("confirmPassword"));
         return userDTO;
-    }
-
-    private Map<String, String> validate(UserDTO userDTO) {
-        var validatorFactory
-                = Validation.buildDefaultValidatorFactory();
-        var validator
-                = validatorFactory.getValidator();
-
-        Set<ConstraintViolation<UserDTO>> violations
-                = validator.validate(userDTO);
-
-        Map<String, String> errors = new HashMap<>();
-
-        for (ConstraintViolation<UserDTO> violation : violations) {
-            String path = violation.getPropertyPath().toString();
-            if (errors.containsKey(path)) {
-                String eMsg = errors.get(path);
-                errors.put(path, eMsg + " <br/> " + violation.getMessage());
-            } else {
-                errors.put(path, violation.getMessage());
-            }
-        }
-        return errors;
     }
 }
