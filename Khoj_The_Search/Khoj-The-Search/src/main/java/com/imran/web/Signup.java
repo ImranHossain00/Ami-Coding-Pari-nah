@@ -38,13 +38,20 @@ public class Signup extends HttpServlet {
             throws ServletException, IOException {
         UserDTO userDTO = copyParamerters(req);
         Map<String, String> errors = ValidationUtil.getInstance().validate(userDTO);
-        if (errors.isEmpty()) {
-            userService.saveUser(userDTO);
-            resp.sendRedirect("/home");
-        } else {
+        if (!errors.isEmpty()) {
             req.setAttribute("errors", errors);
+            req.setAttribute("userDTO", userDTO);
             req.getRequestDispatcher("/WEB-INF/signup.jsp")
                     .forward(req, resp);
+        } else if (userService.isNotUniqueUsername(userDTO)) {
+            errors.put("username", "The username already exist. Please use a different user name.");
+            req.setAttribute("errors", errors);
+            req.setAttribute("userDTO", userDTO);
+            req.getRequestDispatcher("/WEB-INF/signup.jsp")
+                    .forward(req, resp);
+        } else {
+            userService.saveUser(userDTO);
+            resp.sendRedirect("/home");
         }
     }
 

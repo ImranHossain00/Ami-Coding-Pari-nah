@@ -14,6 +14,7 @@
             <label for="username">Username</label>
             <input type="text" class="form-control"
                    id="username"
+                   value="${userDTO.username}"
                    name="username"
                    placeholder=""/>
 

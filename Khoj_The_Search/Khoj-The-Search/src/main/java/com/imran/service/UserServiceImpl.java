@@ -28,6 +28,13 @@ public class UserServiceImpl implements UserService{
         userRepository.save(user);
     }
 
+    @Override
+    public boolean isNotUniqueUsername(UserDTO userDTO) {
+        return userRepository
+                .findByUsername(userDTO.getUsername())
+                .isPresent();
+    }
+
     private String encryptPassword(String password) {
         try {
             var digest = MessageDigest.getInstance("SHA-256");

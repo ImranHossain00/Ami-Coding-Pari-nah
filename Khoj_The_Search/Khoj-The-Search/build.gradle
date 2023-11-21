@@ -19,6 +19,7 @@ dependencies {
     implementation 'jstl:jstl:1.2'
     implementation 'ch.qos.logback:logback-classic:1.4.11'
     implementation 'org.hibernate.validator:hibernate-validator:6.2.5.Final'
+    implementation 'mysql:mysql-connector-java:8.0.30'
 }
 test {
     useJUnitPlatform()
