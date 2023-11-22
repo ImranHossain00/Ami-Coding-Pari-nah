@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="328259d4-4fa7-4e7f-84c9-4414c5aa01dd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/imran/jdbc/DBConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dummy/images/DatabaseError_1.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imran/domain/Domain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imran/domain/Domain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/imran/repository/JDBCUserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imran/repository/JDBCUserRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imran/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imran/service/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +52,9 @@
     <option name="FILTER_INFO" value="true" />
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -213,7 +215,8 @@
       <workItem from="1700472125528" duration="2265000" />
       <workItem from="1700497950964" duration="3463000" />
       <workItem from="1700584385632" duration="5612000" />
-      <workItem from="1700631888598" duration="1637000" />
+      <workItem from="1700631888598" duration="10102000" />
+      <workItem from="1700655386557" duration="726000" />
     </task>
     <servers />
   </component>

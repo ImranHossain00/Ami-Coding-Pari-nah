@@ -19,6 +19,7 @@ public class JDBCUserRepositoryImpl implements UserRepository{
             = LoggerFactory.getLogger(JDBCUserRepositoryImpl.class);
     private DataSource dataSource
             = ConnectionPool.getInstance().getDataSource();
+
     @Override
     public void save(User user) {
         // The value in these question marks in the query
