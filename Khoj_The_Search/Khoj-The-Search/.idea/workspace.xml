@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="328259d4-4fa7-4e7f-84c9-4414c5aa01dd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imran/jdbc/DBConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imran/domain/Domain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imran/domain/Domain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/imran/repository/JDBCUserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imran/repository/JDBCUserRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imran/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imran/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imran/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imran/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/imran/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imran/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imran/web/Signup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imran/web/Signup.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +69,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/peripatetic/Project/gradles/E_Shoppers",
+    "last_opened_file_path": "/home/peripatetic/Project/Simple-Projects-with-JAVA/Khoj_The_Search/Khoj-The-Search",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -87,7 +85,20 @@
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.78">
+    <configuration name="DBConnection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.imran.jdbc.DBConnection" />
+      <module name="Khoj-The-Search.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.imran.jdbc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat 9.0.78" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.78" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -175,6 +186,11 @@
         </option>
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.DBConnection" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -196,7 +212,8 @@
       <workItem from="1700374378827" duration="29000" />
       <workItem from="1700472125528" duration="2265000" />
       <workItem from="1700497950964" duration="3463000" />
-      <workItem from="1700584385632" duration="765000" />
+      <workItem from="1700584385632" duration="5612000" />
+      <workItem from="1700631888598" duration="1637000" />
     </task>
     <servers />
   </component>

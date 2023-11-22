@@ -3,13 +3,16 @@ package com.imran.service;
 import com.imran.domain.User;
 import com.imran.dto.UserDTO;
 import com.imran.repository.UserRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 public class UserServiceImpl implements UserService{
-
+    private static final Logger LOGGER
+            = LoggerFactory.getLogger(UserServiceImpl.class);
     private UserRepository userRepository;
 
     public UserServiceImpl(UserRepository userRepository){
@@ -20,10 +23,10 @@ public class UserServiceImpl implements UserService{
     // how a new user will be stored in our database.
     @Override
     public void saveUser(UserDTO userDTO) {
-        String encrypted = encryptPassword(userDTO.getPassword());
         User user = new User();
         user.setUsername(userDTO.getUsername());
-        user.setPassword(encrypted);
+        user.setPassword(encryptPassword(userDTO.getPassword()));
+        user.setVersion(1L);
 
         userRepository.save(user);
     }

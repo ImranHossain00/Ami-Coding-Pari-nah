@@ -5,6 +5,8 @@ import com.imran.repository.JDBCUserRepositoryImpl;
 import com.imran.service.UserService;
 import com.imran.service.UserServiceImpl;
 import com.imran.util.ValidationUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -22,12 +24,15 @@ import java.util.Set;
 @WebServlet("/signup")
 public class Signup extends HttpServlet {
 
+    private static final Logger LOGGER
+            = LoggerFactory.getLogger(Signup.class);
     private UserService userService
             = new UserServiceImpl(new JDBCUserRepositoryImpl());
     @Override
     protected void doGet(HttpServletRequest req,
                          HttpServletResponse resp)
             throws ServletException, IOException {
+        LOGGER.info("Serving signup page");
         RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/signup.jsp");
         rd.forward(req,resp);
     }
@@ -39,17 +44,24 @@ public class Signup extends HttpServlet {
         UserDTO userDTO = copyParamerters(req);
         Map<String, String> errors = ValidationUtil.getInstance().validate(userDTO);
         if (!errors.isEmpty()) {
+            LOGGER.info("User data is incorrect.");
             req.setAttribute("errors", errors);
             req.setAttribute("userDTO", userDTO);
             req.getRequestDispatcher("/WEB-INF/signup.jsp")
                     .forward(req, resp);
         } else if (userService.isNotUniqueUsername(userDTO)) {
+            LOGGER.info("User data is incorrect.");
             errors.put("username", "The username already exist. Please use a different user name.");
             req.setAttribute("errors", errors);
             req.setAttribute("userDTO", userDTO);
             req.getRequestDispatcher("/WEB-INF/signup.jsp")
                     .forward(req, resp);
         } else {
+            LOGGER.info("User data is correct.");
+            LOGGER.info(
+                    "Getting value from userDTO username: {}, password: {}"
+                    , userDTO.getUsername(), userDTO.getPassword()
+            );
             userService.saveUser(userDTO);
             resp.sendRedirect("/home");
         }

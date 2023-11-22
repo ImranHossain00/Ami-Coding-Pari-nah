@@ -3,8 +3,8 @@ package com.imran.domain;
 import java.time.LocalDateTime;
 
 public abstract class Domain {
-    private Long version;
     private Long id;
+    private Long version = 0L;
     private LocalDateTime dateCreated
             = LocalDateTime.now();
     private LocalDateTime dateLastUpdated

@@ -3,6 +3,7 @@ package com.imran.domain;
 public class User extends Domain {
     private String username;
     private String password;
+    public User(){}
 
     public String getUsername() {
         return username;
