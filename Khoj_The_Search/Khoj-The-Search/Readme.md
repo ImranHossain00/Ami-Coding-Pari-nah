@@ -1,8 +1,7 @@
 ### Arrived Quesions
 - **Connection with database failed:** When we try to connect our database with The DataSource object
   it was not working properly. It was showing this error:
-  >HTTP Status 500 – Internal Server Error <br/>
-  >Type Exception Report
+  ![Alter text]()
 
 Message Unable to insert data into database.
 
