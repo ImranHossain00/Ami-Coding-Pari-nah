@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="328259d4-4fa7-4e7f-84c9-4414c5aa01dd" name="Changes" comment="" />
+    <list default="true" id="328259d4-4fa7-4e7f-84c9-4414c5aa01dd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imran/dto/LoginDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imran/exceptions/UserNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imran/util/SecurityContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imran/web/Logout.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/functions.tld" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imran/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imran/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imran/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imran/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imran/web/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imran/web/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imran/web/Signup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imran/web/Signup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/includes/navigation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/includes/navigation.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,13 +81,13 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/peripatetic/Project/Simple-Projects-with-JAVA/Khoj_The_Search/Khoj-The-Search",
+    "last_opened_file_path": "/home/peripatetic/Project/gradles/E_Shoppers",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "editor.preferences.completion",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -211,11 +226,18 @@
       <workItem from="1700497950964" duration="3463000" />
       <workItem from="1700584385632" duration="5612000" />
       <workItem from="1700631888598" duration="10102000" />
-      <workItem from="1700655386557" duration="1444000" />
+      <workItem from="1700655386557" duration="1610000" />
+      <workItem from="1700711917253" duration="155000" />
+      <workItem from="1700759892843" duration="2843000" />
+      <workItem from="1700805532272" duration="5198000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

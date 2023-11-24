@@ -63,7 +63,7 @@ public class Signup extends HttpServlet {
                     , userDTO.getUsername(), userDTO.getPassword()
             );
             userService.saveUser(userDTO);
-            resp.sendRedirect("/home");
+            resp.sendRedirect("/login");
         }
     }
 

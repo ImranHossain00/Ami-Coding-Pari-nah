@@ -1,8 +1,14 @@
+<%@taglib prefix="sec" uri="http://imran.com/functions" %>
 <%@include file="includes/header.jsp"%>
 <%@include file="includes/navigation.jsp"%>
-<div class="container">
 
-    <h1>Khoj The Search</h1>
+<div class="container">
+    <div class="jumbotron">
+        <c:if test="${sec:isAuthenticated(pageContext.request)}">
+            <h1> Hello <c:out value="${sec:getCurrentUser(pageContext.request).username}"/>, Welcome to our Astana </h1>
+        </c:if>
+    </div>
+
     <form class="form-horizontal" role="form"
           method="post"
           action="<c:url value="/home"/>">
@@ -27,4 +33,5 @@
         <input type="submit" value="Khoj">
     </form>
 </div>
+
 <%@include file="includes/footer.jsp"%>

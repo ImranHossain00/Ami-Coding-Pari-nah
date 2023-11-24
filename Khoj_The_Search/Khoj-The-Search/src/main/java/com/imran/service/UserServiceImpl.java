@@ -1,7 +1,9 @@
 package com.imran.service;
 
 import com.imran.domain.User;
+import com.imran.dto.LoginDTO;
 import com.imran.dto.UserDTO;
+import com.imran.exceptions.UserNotFoundException;
 import com.imran.repository.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -36,6 +38,22 @@ public class UserServiceImpl implements UserService{
         return userRepository
                 .findByUsername(userDTO.getUsername())
                 .isPresent();
+    }
+
+    @Override
+    public User verifyUser(LoginDTO loginDTO)
+            throws UserNotFoundException {
+        var user
+                = userRepository
+                .findByUsername(loginDTO.getUsername())
+                .orElseThrow(() -> new UserNotFoundException(
+                        "User not found by " + loginDTO.getUsername()));
+        var encrypted = encryptPassword(loginDTO.getPassword());
+        if (user.getPassword().equals(encrypted)) {
+            return user;
+        } else {
+            throw new UserNotFoundException("Incorrect password");
+        }
     }
 
     private String encryptPassword(String password) {
