@@ -13,6 +13,14 @@ This project is a simple searching tool powered by Java JSP Servlet. It involves
 ## Screenshots
 ![Alter text](https://github.com/ImranHossain00/Simple-Projects-with-JAVA/blob/main/Khoj_The_Search/Khoj-The-Search/src/main/webapp/images/khoj_2.jpg)
 ![Alter text](https://github.com/ImranHossain00/Simple-Projects-with-JAVA/blob/main/Khoj_The_Search/Khoj-The-Search/src/main/webapp/images/khoj_3.jpg)
+
+## Prerequisites
+What things I have installed in my Device:
+```
+Tomcat server 8.
+Locally installed MySQL.
+Compatible IDE, Intellij IDEA recommended for this project.
+```
 ## Arrived Quesions
 - **Connection with database failed:** When we try to connect our database with The DataSource object
   it was not working properly. It was showing this error:
