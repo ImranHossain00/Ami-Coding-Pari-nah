@@ -21,7 +21,7 @@
                    id="inputValues"
                    value="${numberListDTO.inputValues}"
                    name="inputValues"
-                   placeholder="don't use 2 consecutive spaces. For example: 1, 2, 3"/>
+                   placeholder="The input only contains digits, spaces and commas."/>
 
             <c:if test="${errors.inputValues != null}">
                 <small class="text-danger">${errors.inputValues}</small>
@@ -29,13 +29,14 @@
         </div>
         <div class="form-group">
             <label for="searchValue">
-                Value for Search
+                Search Values
             </label>
             <input type="text"
                    class="form-control"
                    id="searchValue"
                    value="${numberListDTO.searchValue}"
-                   name="searchValue"/>
+                   name="searchValue"
+                   placeholder="you can search multiple numbers. use only digits, commas and spaces"/>
             <c:if test="${errors.searchValue != null}">
                 <small class="text-danger">${errors.searchValue}</small>
             </c:if>

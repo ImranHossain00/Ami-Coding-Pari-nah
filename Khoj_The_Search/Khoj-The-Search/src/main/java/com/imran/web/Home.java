@@ -3,6 +3,9 @@ package com.imran.web;
 
 
 import com.imran.dto.NumberListDTO;
+import com.imran.repository.JdbcNumberListRepository;
+import com.imran.service.NumberListService;
+import com.imran.service.NumberListServiceImpl;
 import com.imran.util.ValidationUtil;
 
 import javax.servlet.RequestDispatcher;
@@ -13,12 +16,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 @WebServlet("/home")
 public class Home extends HttpServlet {
+
+    private NumberListService numberListService
+            = new NumberListServiceImpl(new JdbcNumberListRepository());
 
     @Override
     protected void doGet(HttpServletRequest req,
@@ -36,57 +43,57 @@ public class Home extends HttpServlet {
         NumberListDTO numberListDTO = copyParameters(req);
         var errors = ValidationUtil.getInstance().validate(numberListDTO);
         if (!errors.isEmpty()) {
-            req.setAttribute("errors", errors);
-            req.setAttribute("numberListDTO", numberListDTO);
-            req.getRequestDispatcher("/WEB-INF/home.jsp")
-                    .forward(req, resp);
+            errorEncounter(req, resp, errors, numberListDTO);
         } else if (!isValidInput(numberListDTO.getInputValues())) {
             errors.put("inputValues", "Input is not accurate format, please check your input");
-            req.setAttribute("errors", errors);
-            req.setAttribute("numberListDTO", numberListDTO);
-            req.getRequestDispatcher("/WEB-INF/home.jsp")
-                    .forward(req, resp);
-        } else if (!isValidSearchValue(numberListDTO.getSearchValue())) {
+        } else if (!isValidInput(numberListDTO.getSearchValue())) {
             errors.put("searchValue", "Search value is not accurate format, please check your searchValue");
-            req.setAttribute("errors", errors);
-            req.setAttribute("numberListDTO", numberListDTO);
-            req.getRequestDispatcher("/WEB-INF/home.jsp")
-                    .forward(req, resp);
+        } else if (!haveAnyNumber(numberListDTO.getInputValues())) {
+            errors.put("inputValues", "Please give at least one Integer number");
+        } else if (!haveAnyNumber(numberListDTO.getSearchValue())) {
+            errors.put("searchValue", "Please give at least one Integer number");
         } else {
             resp.sendRedirect("/home");
         }
+
+        if (!errors.isEmpty())
+            errorEncounter(req, resp, errors, numberListDTO);
     }
 
-    private boolean isValidSearchValue(String searchValue) {
+    private void errorEncounter(HttpServletRequest req,
+                                HttpServletResponse resp,
+                                Map<String, String> errors,
+                                NumberListDTO numberListDTO)
+            throws ServletException, IOException{
+        req.setAttribute("errors", errors);
+        req.setAttribute("numberListDTO", numberListDTO);
+        req.getRequestDispatcher("/WEB-INF/home.jsp")
+                .forward(req, resp);
+    }
+    private boolean haveAnyNumber(String searchValue) {
         Predicate<Character> isDigit = Character::isDigit;
 
-        //Instead of using forEach,
-        //I replaced it with allMatch in the stream to check
-        //if all characters match the condition specified by the isDigit predicate.
         return searchValue
-                .trim()
                 .chars()
                 .mapToObj(c -> (char)c)
                 .collect(Collectors.toList())
                 .stream()
-                .allMatch(isDigit);// if all char are digit returns true otherwise false;
-
+                .anyMatch(isDigit);
     }
 
     private boolean isValidInput(String inputValues) {
         Predicate<Character> isDigit = Character::isDigit;
         Predicate<Character> isSpace = c -> c == ' ';
+        Predicate<Character> isComma = c -> c == ',';
 
         // It returns true if all characters are either
-        // digits or spaces; otherwise, it returns false.
+        // digits or spaces or commas; otherwise, it returns false.
         return inputValues
-                .replaceAll(",", " ")
-                .trim()
                 .chars()                              //Get an IntStream of characters
                 .mapToObj(c -> (char)c)               //Convert to a Stream<Character>
                 .collect(Collectors.toList())         //Collect to List<Character>
                 .stream()
-                .allMatch(isDigit.or(isSpace));
+                .allMatch(isDigit.or(isSpace).or(isComma));
     }
 
     private NumberListDTO copyParameters(HttpServletRequest req) {
