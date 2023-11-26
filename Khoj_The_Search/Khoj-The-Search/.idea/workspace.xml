@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="328259d4-4fa7-4e7f-84c9-4414c5aa01dd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imran/service/NumberListServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imran/service/NumberListServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imran/web/Home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imran/web/Home.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/result.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/result.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="328259d4-4fa7-4e7f-84c9-4414c5aa01dd" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -225,7 +220,7 @@
       <workItem from="1700922813491" duration="957000" />
       <workItem from="1700979050053" duration="4661000" />
       <workItem from="1700985734602" duration="6801000" />
-      <workItem from="1700999558159" duration="3328000" />
+      <workItem from="1700999558159" duration="4002000" />
     </task>
     <servers />
   </component>
