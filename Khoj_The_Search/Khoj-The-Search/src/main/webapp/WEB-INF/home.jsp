@@ -13,22 +13,32 @@
           method="post"
           action="<c:url value="/home"/>">
         <div class="form-group">
-            <label for="inputvalues">
+            <label for="inputValues">
                 Input values
             </label>
-            <input type="number"
+            <input type="text"
                    class="form-control"
-                   id="inputvalues"
-                   name="inputvalues"/>
+                   id="inputValues"
+                   value="${numberListDTO.inputValues}"
+                   name="inputValues"
+                   placeholder="don't use 2 consecutive spaces. For example: 1, 2, 3"/>
+
+            <c:if test="${errors.inputValues != null}">
+                <small class="text-danger">${errors.inputValues}</small>
+            </c:if>
         </div>
         <div class="form-group">
-            <label for="search">
-                Search
+            <label for="searchValue">
+                Value for Search
             </label>
-            <input type="number"
+            <input type="text"
                    class="form-control"
-                   id="search"
-                   name="search"/>
+                   id="searchValue"
+                   value="${numberListDTO.searchValue}"
+                   name="searchValue"/>
+            <c:if test="${errors.searchValue != null}">
+                <small class="text-danger">${errors.searchValue}</small>
+            </c:if>
         </div>
         <input type="submit" value="Khoj">
     </form>
