@@ -53,7 +53,11 @@ public class Home extends HttpServlet {
         } else if (!haveAnyNumber(numberListDTO.getSearchValue())) {
             errors.put("searchValue", "Please give at least one Integer number");
         } else {
-            resp.sendRedirect("/home");
+            boolean result = numberListService.searchTheNumber(numberListDTO);
+            req.setAttribute("result", result);
+            req.setAttribute("numberListDTO", numberListDTO);
+            req.getRequestDispatcher("/WEB-INF/result.jsp")
+                    .forward(req, resp);
         }
 
         if (!errors.isEmpty())
