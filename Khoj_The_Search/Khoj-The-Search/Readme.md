@@ -7,15 +7,16 @@ This project might (and certainly does) have bugs, vulnerabilities or some other
 
 ## Features include
 1. Login And Registration.
-   ```
-   A user can create a account with a unique Username and password, then he/she can login.
+   ```md
+   Users can create an account by providing a unique username and password. Subsequently,
+   they can log in using the established credentials.
    ```
    ![Alter text](https://github.com/ImranHossain00/Simple-Projects-with-JAVA/blob/main/Khoj_The_Search/Khoj-The-Search/src/main/webapp/images/)
 2. Search single/multiple Ineger numbers from given a list of Integer numbers.
    ```md
-   After loing the user will be redearect to the home page. There a user can give a/some integer numbers as input and a/some integer numbers as search value.
-   There will be a button named **Khoj**. After giving valid input user can search the search value/s into the input value/s whether search value have or not
-   into the input values. If have **Result** will show `true` otherwise `false`.
+   After logging in, users are redirected to the home page where they can input one or more integer values and specify one or more integer values as search criteria.
+   A button labeled `Khoj` is provided. Upon entering valid input, users can initiate a search to determine whether the search values exist within the provided input values.
+   The result, either `true` or `false`, will be displayed.
    ```
    ![Alter text](https://github.com/ImranHossain00/Simple-Projects-with-JAVA/blob/main/Khoj_The_Search/Khoj-The-Search/src/main/webapp/images/)
 3. Rest Api.
