@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="328259d4-4fa7-4e7f-84c9-4414c5aa01dd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +68,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/peripatetic/Practice/JavaPractice",
+    "last_opened_file_path": "/home/peripatetic/Project/Simple-Projects-with-JAVA/Khoj_The_Search/Khoj-The-Search",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -225,6 +224,7 @@
       <workItem from="1700985734602" duration="6801000" />
       <workItem from="1700999558159" duration="5992000" />
       <workItem from="1701066314550" duration="95000" />
+      <workItem from="1701069920449" duration="697000" />
     </task>
     <servers />
   </component>
