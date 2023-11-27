@@ -1,11 +1,6 @@
 # Khoj The Search
 
 ## About
-<<<<<<< HEAD
-This project is a simple searching tool powered by Java JSP Servlet. In this project I handled some simple edge cases and trying to building a solid system architecture.
-=======
-This project is a simple searching tool powered by Java JSP Servlet. In this project I handled some simple edge cases and trying to building a solid system architecture. 
->>>>>>> 42271c63e4ea8ad86d07c7aa44560e2e71d9cf5a
 This project is simply a demo demonstrating basic features which is only the tip of an iceberg.
 This project might (and certainly does) have bugs, vulnerabilities or some other types of issues. So, contributions are always welcome
 
