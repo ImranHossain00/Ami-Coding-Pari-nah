@@ -12,7 +12,7 @@ This project might (and certainly does) have bugs, vulnerabilities or some other
    they can log in using the established credentials.
    ```
    ![Alter text](https://github.com/ImranHossain00/Simple-Projects-with-JAVA/blob/main/Khoj_The_Search/Khoj-The-Search/src/main/webapp/images/)
-2. Search single/multiple Ineger numbers from given a list of Integer numbers.
+2. Searching single/multiple Integer numbers from the list of Integer numbers.
    ```md
    After logging in, users are redirected to the home page where they can input one or more integer values and specify one or more integer values as search criteria.
    A button labeled `Khoj` is provided. Upon entering valid input, users can initiate a search to determine whether the search values exist within the provided input values.
