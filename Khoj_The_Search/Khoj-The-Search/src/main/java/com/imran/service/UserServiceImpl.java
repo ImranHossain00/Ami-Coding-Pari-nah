@@ -39,6 +39,7 @@ public class UserServiceImpl implements UserService{
                 .isPresent();
     }
 
+
     @Override
     public User verifyUser(LoginDTO loginDTO)
             throws UserNotFoundException {

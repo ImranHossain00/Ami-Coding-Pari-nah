@@ -3,8 +3,10 @@ package com.imran.service;
 import com.imran.domain.NumberList;
 import com.imran.dto.NumberListDTO;
 import com.imran.repository.NumberListRepository;
+import com.imran.util.SecurityContext;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -20,20 +22,28 @@ public class NumberListServiceImpl implements NumberListService{
     @Override
     public void saveNumbers(NumberListDTO numberListDTO) {
         NumberList numberList = new NumberList();
+
+        List<Integer> inputList
+                = makeNumberList(numberListDTO.getInputValues());
+        Collections.sort(inputList);
+
+        numberList.setNumberList(inputList);
+        numberList.setUser(numberListDTO.getUser());
+
         numberListRepository.save(numberList);
     }
 
     @Override
     public boolean searchTheNumber(NumberListDTO numberListDTO) {
         saveNumbers(numberListDTO);
-        HashSet<Integer> inputValues = makeNumberList(numberListDTO.getInputValues());
-        HashSet<Integer> searchValues = makeNumberList(numberListDTO.getSearchValue());
+        List<Integer> inputValues = makeNumberList(numberListDTO.getInputValues());
+        List<Integer> searchValues = makeNumberList(numberListDTO.getSearchValue());
 
 
-        return inputValues.containsAll(searchValues);
+        return new HashSet<>(inputValues).containsAll(new HashSet<>(searchValues));
     }
 
-    private HashSet<Integer> makeNumberList(String searchValue) {
+    private List<Integer> makeNumberList(String searchValue) {
         List<Character> chars
                 = searchValue
                 .replaceAll(",", " ")
@@ -55,6 +65,6 @@ public class NumberListServiceImpl implements NumberListService{
                 tem.append(c);
         }
 
-        return new HashSet<>(list);
+        return list;
     }
 }

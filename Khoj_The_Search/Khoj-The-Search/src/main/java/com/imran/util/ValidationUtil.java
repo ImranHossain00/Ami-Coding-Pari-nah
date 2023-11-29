@@ -1,17 +1,16 @@
 package com.imran.util;
 
-import com.imran.dto.UserDTO;
+
 
 import javax.validation.ConstraintViolation;
 import javax.validation.Validation;
 import javax.validation.Validator;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 
 
 // This is an example of singleton pattern.
-public class ValidationUtil {
+public final class ValidationUtil {
     private static final ValidationUtil INSTANCE = new ValidationUtil();
     private final Validator validator;
     private ValidationUtil() {
@@ -26,7 +25,7 @@ public class ValidationUtil {
     public <T>Map<String, String> validate(T obj) {
         var violations = validator.validate(obj);
 
-        // This lamda expression simplify and reduces the code that is given as below
+        // This lamda expression simplify and reduces the code that is given as belowX
         return violations.stream()
                 .collect(Collectors.toMap(
                         violation ->

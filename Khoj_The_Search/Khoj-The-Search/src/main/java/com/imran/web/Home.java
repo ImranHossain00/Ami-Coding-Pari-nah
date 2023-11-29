@@ -6,6 +6,7 @@ import com.imran.dto.NumberListDTO;
 import com.imran.repository.JdbcNumberListRepository;
 import com.imran.service.NumberListService;
 import com.imran.service.NumberListServiceImpl;
+import com.imran.util.SecurityContext;
 import com.imran.util.ValidationUtil;
 
 import javax.servlet.RequestDispatcher;
@@ -104,6 +105,7 @@ public class Home extends HttpServlet {
         NumberListDTO numberListDTO = new NumberListDTO();
         numberListDTO.setInputValues(req.getParameter("inputValues"));
         numberListDTO.setSearchValue(req.getParameter("searchValue"));
+        numberListDTO.setUser(SecurityContext.getCurrentUser(req));
         return numberListDTO;
     }
 }

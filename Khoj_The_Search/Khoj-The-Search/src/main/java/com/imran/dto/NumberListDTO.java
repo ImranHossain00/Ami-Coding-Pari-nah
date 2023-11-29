@@ -1,5 +1,7 @@
 package com.imran.dto;
 
+import com.imran.domain.User;
+
 import javax.validation.constraints.NotEmpty;
 import java.time.LocalDateTime;
 
@@ -9,16 +11,14 @@ public class NumberListDTO {
     private String inputValues;
     @NotEmpty
     private String searchValue;
+    private User user;
 
-    private LocalDateTime insertionTime
-            = LocalDateTime.now();
-
-    public LocalDateTime getInsertionTime() {
-        return insertionTime;
+    public User getUser() {
+        return user;
     }
 
-    public void setInsertionTime(LocalDateTime insertionTime) {
-        this.insertionTime = insertionTime;
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public String getInputValues() {

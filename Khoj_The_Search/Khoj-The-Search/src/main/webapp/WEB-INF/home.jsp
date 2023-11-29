@@ -41,7 +41,19 @@
                 <small class="text-danger">${errors.searchValue}</small>
             </c:if>
         </div>
-        <input type="submit" value="Khoj">
+        <c:choose>
+            <c:when test="${sec:isAuthenticated(pageContext.request)}">
+                <input type="submit" value="Khoj">
+            </c:when>
+            <c:otherwise>
+                 <span>
+                    You are not logged In :). Please log in first ->
+                    <a class="btn-link" href="<c:url value="/login"/>">
+                        Log in
+                    </a>
+                </span>
+            </c:otherwise>
+        </c:choose>
     </form>
 </div>
 

@@ -20,21 +20,26 @@ public class JDBCUserRepositoryImpl implements UserRepository{
     private DataSource dataSource
             = ConnectionPool.getInstance().getDataSource();
 
+    // The value in these question marks in the query
+    // will be added in runtime.
+    private static final String INSERT_USER = "insert into customer (" +
+            " username, " + // 1
+            " password, " + // 2
+            " version, " + // 3
+            " date_created, " + // 4
+            " date_last_updated " + // 5
+            " ) " +
+            " values(?, ?, ?, ?, ?)";
+
+    private static final String FIND_ALL_USER = "select * from customer";
+
+
+
     @Override
     public void save(User user) {
-        // The value in these question marks in the query
-        // will be added in runtime.
-        var sql = "insert into customer (" +
-                 " username, " + // 1
-                 " password, " + // 2
-                 " version, " + // 3
-                 " date_created, " + // 4
-                 " date_last_updated " + // 5
-                 " ) " +
-                 " values(?, ?, ?, ?, ?)";
 
         try (var connection = dataSource.getConnection();
-             var prstmnt = connection.prepareStatement(sql)) {
+             var prstmnt = connection.prepareStatement(INSERT_USER)) {
             prstmnt.setString(1, user.getUsername());
             prstmnt.setString(2, user.getPassword());
             prstmnt.setLong(3, user.getVersion() + 1L);
@@ -51,10 +56,9 @@ public class JDBCUserRepositoryImpl implements UserRepository{
     @Override
     public Optional<User> findByUsername(String username) {
         List<User> USERS = new ArrayList<>();
-        var sql = "select * from customer";
 
         try (var connection = dataSource.getConnection();
-             var prstmnt = connection.prepareStatement(sql)){
+             var prstmnt = connection.prepareStatement(FIND_ALL_USER)){
             var resultSet = prstmnt.executeQuery();
             while (resultSet.next()) {
                 User user = extractUser(resultSet);
