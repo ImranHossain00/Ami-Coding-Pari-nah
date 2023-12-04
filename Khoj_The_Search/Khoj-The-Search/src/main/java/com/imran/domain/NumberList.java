@@ -6,8 +6,13 @@ import java.util.List;
 public class NumberList extends Domain {
     private List<Integer> numberList;
     private User user;
-    private LocalDateTime insertTime
+    private final LocalDateTime insertTime
             = LocalDateTime.now();
+
+
+    public LocalDateTime getInsertTime() {
+        return insertTime;
+    }
 
     public NumberList() {}
     public User getUser() {

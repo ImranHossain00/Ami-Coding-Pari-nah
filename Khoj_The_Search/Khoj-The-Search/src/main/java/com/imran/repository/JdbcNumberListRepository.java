@@ -1,53 +1,108 @@
 package com.imran.repository;
 
 import com.imran.domain.NumberList;
+import com.imran.domain.RESTApi;
 import com.imran.jdbc.ConnectionPool;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.sql.DataSource;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
-import java.util.List;
-import java.util.Optional;
+import java.time.LocalDateTime;
+import java.util.*;
 
 public class JdbcNumberListRepository implements NumberListRepository{
-
     private static final Logger LOGGER
             = LoggerFactory.getLogger(JDBCUserRepositoryImpl.class);
     private DataSource dataSource
             = ConnectionPool.getInstance().getDataSource();
 
-//            "INSERT INTO your_table_name (user_id, user_value, version, date_created, date_last_updated) "
-//            + " VALUES ";
-//            (1, 2, 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-//            (1, 3, 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-//            (1, 4, 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-//            (1, 5, 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-//            (1, -10, 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+    private static final String SELECT_VALUES_WITHIN_GIVEN_TIME
+            = "select user_id, insert_time, user_values " +
+             " from user_values1 " +
+             " where user_id=? and insert_time between ? and ?";
 
-    // FIXME: 11/28/23 Complete the method
     @Override
     public void save(NumberList list) {
         final String INSERT_NUMBER_LIST = makeInsertionQuery(list.getNumberList().size());
 
-        try (var connection = dataSource.getConnection(); var prstmnt = connection.prepareStatement(INSERT_NUMBER_LIST)){
-            // write the rest logic
+        try (var connection = dataSource.getConnection();
+             var prstmnt = connection.prepareStatement(INSERT_NUMBER_LIST)){
+
+            int cnt = 1;
+            for (Integer val : list.getNumberList()) {
+                prstmnt.setLong(cnt++, list.getUser().getId());
+                prstmnt.setTimestamp(cnt++, Timestamp.valueOf(list.getInsertTime()));
+                prstmnt.setLong(cnt++, val);
+                prstmnt.setLong(cnt++, list.getVersion());
+                prstmnt.setTimestamp(cnt++, Timestamp.valueOf(list.getDateCreated()));
+                prstmnt.setTimestamp(cnt++, Timestamp.valueOf(list.getDateLastUpdated()));
+            }
+
+            prstmnt.execute();
+
         } catch (SQLException e) {
             throw new RuntimeException("Unable to insert the values");
         }
     }
 
     @Override
-    public Optional<NumberList> findByTimeAndUserId(Timestamp sTime, Timestamp eTime, Long id) {
-        return Optional.empty();
+    public void findByTimeAndUserId(RESTApi restApi) {
+        try (var connection = dataSource.getConnection();
+             var prstmt = connection.prepareStatement(SELECT_VALUES_WITHIN_GIVEN_TIME)) {
+            prstmt.setLong(1, restApi.getUserId());
+            prstmt.setTimestamp(2 , Timestamp.valueOf(restApi.getStartTime()));
+            prstmt.setTimestamp(3, Timestamp.valueOf(restApi.getEndingTime()));
+
+            var resultSet = prstmt.executeQuery();
+
+
+            if (resultSet.next()) {
+                LOGGER.info("Query fetches some data form database");
+            } else {
+                LOGGER.info("There have no data for given time");
+            }
+            // Finding the values and inserting them into a hashmap
+            restApi.setListMap(extractResultSet(resultSet));
+
+        } catch (SQLException e) {
+            throw new RuntimeException("Unable to search given time");
+        }
+    }
+
+    private Map<LocalDateTime, String > extractResultSet(ResultSet resultSet)
+            throws SQLException {
+
+        Map<LocalDateTime, String > listMap = new HashMap<>();
+        StringBuilder numbers = new StringBuilder();
+
+        while (resultSet.next()) {
+            LocalDateTime time
+                    = resultSet
+                    .getTimestamp("insert_time")
+                    .toLocalDateTime();
+            if (listMap.containsKey(time)) {
+                listMap.put(
+                        time,
+                        numbers.append(
+                                resultSet.getLong("user_values")
+                        ).append(", ").toString());
+            } else {
+                numbers = new StringBuilder();
+                listMap.put(time, numbers.toString());
+            }
+        }
+
+        return listMap;
     }
 
     private static String makeInsertionQuery(int len) {
 
         StringBuilder query = new StringBuilder(
                 "INSERT INTO user_values1 (user_id, insert_time, user_values, version, date_created, date_last_updated)  VALUES ");
-//        (1, 2, 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
 
         for (int i = 0; i < len; i++) {
             if (i == len-1)

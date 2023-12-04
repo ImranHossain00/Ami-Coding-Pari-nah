@@ -21,8 +21,8 @@ This project might (and certainly does) have bugs, vulnerabilities or some other
 3. Rest Api.
 
 ## Screenshots
-![Alter text](https://github.com/ImranHossain00/Simple-Projects-with-JAVA/blob/main/Khoj_The_Search/Khoj-The-Search/src/main/webapp/images/khoj_2.jpg)
-![Alter text](https://github.com/ImranHossain00/Simple-Projects-with-JAVA/blob/main/Khoj_The_Search/Khoj-The-Search/src/main/webapp/images/khoj_3.jpg)
+![Alter text](https://github.com/ImranHossain00/Simple-Projects-with-JAVA/blob/main/Khoj_The_Search/Khoj-The-Search/screenshots/khoj_signup.jpg?raw=true)
+![Alter text](https://github.com/ImranHossain00/Simple-Projects-with-JAVA/blob/main/Khoj_The_Search/Khoj-The-Search/screenshots/khoj_.jpg?raw=true)
 
 ## Prerequisites
 What things I have installed in my Device:

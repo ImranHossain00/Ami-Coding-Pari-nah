@@ -5,16 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="328259d4-4fa7-4e7f-84c9-4414c5aa01dd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imran/filter/AuthFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imran/service/RESTApiService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imran/service/RESTApiServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imran/web/RestApi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imran/annotations/PasswordEqual.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imran/annotations/PasswordEqual.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/imran/domain/NumberList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imran/domain/NumberList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imran/dto/NumberListDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imran/dto/NumberListDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/imran/repository/JDBCUserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imran/repository/JDBCUserRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/imran/repository/JdbcNumberListRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imran/repository/JdbcNumberListRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imran/repository/NumberListRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imran/repository/NumberListRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/imran/service/NumberListServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imran/service/NumberListServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imran/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imran/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imran/util/ValidationUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imran/util/ValidationUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imran/web/Home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imran/web/Home.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/DatabaseError_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/khoj_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/khoj_3.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,15 +49,20 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package-info" />
-        <option value="AnnotationType" />
-        <option value="Interface" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Interface" />
+        <option value="AnnotationType" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4c83d4bd-a512-4e91-b5d5-26367f157d55/console.sql" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/imran/repository/JdbcNumberListRepository.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/imran/service/RESTApiServiceImpl.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -76,15 +88,22 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "database.data.extractors.current.export.id": "Comma-separated (CSV)_id",
+    "database.data.extractors.current.id": "Comma-separated (CSV)_id",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/peripatetic/Practice/JavaPractice",
+    "last_opened_file_path": "/home/peripatetic/Project/Simple-Projects-with-JAVA/Khoj_The_Search/Khoj-The-Search",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.completion",
+    "settings.editor.selected.configurable": "project.propCompiler",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -240,6 +259,15 @@
       <workItem from="1701160450445" duration="4238000" />
       <workItem from="1701187232594" duration="5965000" />
       <workItem from="1701238349437" duration="1462000" />
+      <workItem from="1701250722806" duration="1206000" />
+      <workItem from="1701276814575" duration="647000" />
+      <workItem from="1701402686685" duration="12879000" />
+      <workItem from="1701496044359" duration="5533000" />
+      <workItem from="1701581560581" duration="576000" />
+      <workItem from="1701592843669" duration="4818000" />
+      <workItem from="1701620474891" duration="2605000" />
+      <workItem from="1701623101011" duration="110000" />
+      <workItem from="1701696396384" duration="6456000" />
     </task>
     <servers />
   </component>

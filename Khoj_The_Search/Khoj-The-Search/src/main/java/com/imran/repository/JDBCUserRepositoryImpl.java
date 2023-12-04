@@ -60,6 +60,7 @@ public class JDBCUserRepositoryImpl implements UserRepository{
         try (var connection = dataSource.getConnection();
              var prstmnt = connection.prepareStatement(FIND_ALL_USER)){
             var resultSet = prstmnt.executeQuery();
+
             while (resultSet.next()) {
                 User user = extractUser(resultSet);
                 USERS.add(user);

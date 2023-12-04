@@ -3,7 +3,6 @@ package com.imran.service;
 import com.imran.domain.NumberList;
 import com.imran.dto.NumberListDTO;
 import com.imran.repository.NumberListRepository;
-import com.imran.util.SecurityContext;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -27,6 +26,7 @@ public class NumberListServiceImpl implements NumberListService{
                 = makeNumberList(numberListDTO.getInputValues());
         Collections.sort(inputList);
 
+        // Getting values from the dto
         numberList.setNumberList(inputList);
         numberList.setUser(numberListDTO.getUser());
 
