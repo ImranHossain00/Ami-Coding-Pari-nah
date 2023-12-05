@@ -36,4 +36,5 @@ public class NumberListDTO {
     public void setSearchValue(String searchValue) {
         this.searchValue = searchValue;
     }
+
 }

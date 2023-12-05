@@ -2,6 +2,8 @@ package com.imran.repository;
 
 import com.imran.domain.NumberList;
 import com.imran.domain.RESTApi;
+import com.imran.domain.TimeAndDate;
+import com.imran.dto.PayloadDTO;
 import com.imran.jdbc.ConnectionPool;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -49,7 +51,7 @@ public class JdbcNumberListRepository implements NumberListRepository{
     }
 
     @Override
-    public void findByTimeAndUserId(RESTApi restApi) {
+    public Vector<TimeAndDate> findByTimeAndUserId(RESTApi restApi) {
         try (var connection = dataSource.getConnection();
              var prstmt = connection.prepareStatement(SELECT_VALUES_WITHIN_GIVEN_TIME)) {
             prstmt.setLong(1, restApi.getUserId());
@@ -58,44 +60,44 @@ public class JdbcNumberListRepository implements NumberListRepository{
 
             var resultSet = prstmt.executeQuery();
 
+            // Finding the values and inserting them into a hashmap
+            Vector<TimeAndDate> timeAndDates = extractResultSet(resultSet);
 
-            if (resultSet.next()) {
-                LOGGER.info("Query fetches some data form database");
+            // For logging view
+            if (!timeAndDates.isEmpty()) {
+                LOGGER.info("Query fetches some data form database. size of list is {}", timeAndDates.size());
             } else {
                 LOGGER.info("There have no data for given time");
             }
-            // Finding the values and inserting them into a hashmap
-            restApi.setListMap(extractResultSet(resultSet));
+            // For logging view
+
+            return timeAndDates;
 
         } catch (SQLException e) {
             throw new RuntimeException("Unable to search given time");
         }
     }
 
-    private Map<LocalDateTime, String > extractResultSet(ResultSet resultSet)
+    private Vector <TimeAndDate> extractResultSet(ResultSet resultSet)
             throws SQLException {
 
-        Map<LocalDateTime, String > listMap = new HashMap<>();
-        StringBuilder numbers = new StringBuilder();
+        Vector <TimeAndDate> timesAndDates = new Vector<>();
 
+        // Extracting the values from resultSet;
         while (resultSet.next()) {
             LocalDateTime time
                     = resultSet
                     .getTimestamp("insert_time")
                     .toLocalDateTime();
-            if (listMap.containsKey(time)) {
-                listMap.put(
-                        time,
-                        numbers.append(
-                                resultSet.getLong("user_values")
-                        ).append(", ").toString());
-            } else {
-                numbers = new StringBuilder();
-                listMap.put(time, numbers.toString());
-            }
-        }
+            Integer val = (int)resultSet.getLong("user_values");
 
-        return listMap;
+            timesAndDates.add(new TimeAndDate(time, val));
+        }
+        // Extraction is completed.
+
+        LOGGER.info("Size of tem {}", timesAndDates.size());
+
+        return timesAndDates;
     }
 
     private static String makeInsertionQuery(int len) {

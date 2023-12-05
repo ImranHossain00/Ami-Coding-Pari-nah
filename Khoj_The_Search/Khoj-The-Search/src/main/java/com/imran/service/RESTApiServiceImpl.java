@@ -1,13 +1,16 @@
 package com.imran.service;
 
 import com.imran.domain.RESTApi;
+import com.imran.domain.TimeAndDate;
+import com.imran.dto.PayloadDTO;
 import com.imran.dto.RestApiDTO;
 import com.imran.repository.NumberListRepository;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Arrays;
-import java.util.function.Predicate;
+import java.util.HashSet;
+import java.util.Vector;
+
 public class RESTApiServiceImpl implements RESTApiService {
 
     NumberListRepository numberListRepository;
@@ -20,10 +23,11 @@ public class RESTApiServiceImpl implements RESTApiService {
     public void search(RestApiDTO restApiDTO) {
 
         var restApi = copyToRestApi(restApiDTO);
-        numberListRepository.findByTimeAndUserId(restApi);
+        Vector <TimeAndDate> timeAndDates
+                = numberListRepository.findByTimeAndUserId(restApi);
 
-        restApiDTO.setStatus(!restApi.getListMap().isEmpty());
-        restApiDTO.setListMap(restApi.getListMap());
+        restApiDTO.setStatus(!timeAndDates.isEmpty());
+        restApiDTO.setPayloadDTOS(makePayloads(timeAndDates));
     }
 
     @Override
@@ -46,5 +50,46 @@ public class RESTApiServiceImpl implements RESTApiService {
         restApi.setEndingTime(LocalDateTime.parse(restApiDTO.getEndingTime(), formatter));
 
         return restApi;
+    }
+
+    private Vector<PayloadDTO> makePayloads(Vector<TimeAndDate> timesAndDates) {
+        HashSet<LocalDateTime> times = new HashSet<>();
+        Vector < Vector < Integer > > values = new Vector<>();
+
+        // dividing time and insert_values
+        for (int i = 0, j = -1; i < timesAndDates.size(); i++) {
+            LocalDateTime time = timesAndDates.get(i).getTime();
+            Integer val = timesAndDates.get(i).getValue();
+            // if we found new time then we're inserting a vector in the values vector.
+            if (!times.contains(time)) {
+                j++;
+                values.add(new Vector<>());
+            }
+
+            // adding time and values;
+            times.add(time);
+            values.get(j).add(val);
+        }
+        // dividing time and insert_values is complete
+
+
+        Vector < PayloadDTO > payloadDTOS = new Vector<>();
+        int j = 0;
+
+        // Making payload objects' vector
+        for (LocalDateTime time : times) {
+            StringBuilder strValues = new StringBuilder();
+            Vector < Integer > curValues = values.get(j++);
+
+            for (int i = 0; i < curValues.size(); i++) {
+                if (i == curValues.size()-1)
+                    strValues.append(curValues.get(i));
+                else
+                    strValues.append(curValues.get(i)).append(", ");
+            }
+            payloadDTOS.add(new PayloadDTO(time.toString(), strValues.toString()));
+        }
+
+        return payloadDTOS;
     }
 }

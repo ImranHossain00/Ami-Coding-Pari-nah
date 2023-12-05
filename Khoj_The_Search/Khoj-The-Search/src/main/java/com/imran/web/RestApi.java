@@ -1,5 +1,8 @@
 package com.imran.web;
 
+import com.google.gson.Gson;
+import com.imran.dto.JsonDTO;
+import com.imran.dto.PayloadDTO;
 import com.imran.dto.RestApiDTO;
 import com.imran.repository.JdbcNumberListRepository;
 import com.imran.service.RESTApiService;
@@ -12,7 +15,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.time.LocalDateTime;
+import java.util.Map;
+import java.util.Vector;
 
 @WebServlet(name = "RESTAPI", value = "/api-rest")
 public class RestApi extends HttpServlet {
@@ -55,11 +61,24 @@ public class RestApi extends HttpServlet {
             req.getRequestDispatcher("/WEB-INF/rest-api.jsp")
                     .forward(req, resp);
         } else {
+            // After the Validation complete save and search operation is performed
+            // by invoking search() method.
             restApiService.search(restApiDTO);
-            resp.sendRedirect("/home");
-        }
 
-//        resp.sendRedirect("/home");
+            // creating jsonDTO object and setting up the properties of jsonDTO
+            JsonDTO jsonDTO = new JsonDTO();
+            jsonDTO.setPayload(restApiDTO.getPayloadDTOS());
+            jsonDTO.setStatus(restApiDTO.isStatus());
+            jsonDTO.setUser_id(restApiDTO.getUserId());
+
+            // creating Json object to send response
+            String resApiDTOJson = new Gson().toJson(jsonDTO);
+            PrintWriter out = resp.getWriter();
+            resp.setContentType("application/json");
+            resp.setCharacterEncoding("UTF-8");
+            out.print(resApiDTOJson);
+            out.flush();
+        }
     }
     private RestApiDTO copy(HttpServletRequest req) {
         var restApiDTO = new RestApiDTO();
