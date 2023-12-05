@@ -10,7 +10,8 @@ This project might (and certainly does) have bugs, vulnerabilities or some other
    Users can create an account by providing a unique username and password. Subsequently,
    they can log in using the established credentials.
    ```
-   ![Alter text](https://github.com/ImranHossain00/Simple-Projects-with-JAVA/blob/main/Khoj_The_Search/Khoj-The-Search/src/main/webapp/images/)
+   ![Alter text](https://github.com/ImranHossain00/Simple-Projects-with-JAVA/blob/main/Khoj_The_Search/Khoj-The-Search/screenshots/khoj_signup.jpg?raw=true)
+   ![Alter text](https://github.com/ImranHossain00/Simple-Projects-with-JAVA/blob/main/Khoj_The_Search/Khoj-The-Search/screenshots/khoj_login.jpg?raw=true)
 2. Searching single/multiple Integer numbers from the list of Integer numbers.
    ```md
    After logging in, users are redirected to the home page where they can input one or more integer values and specify one or more integer values as search criteria.
@@ -19,17 +20,27 @@ This project might (and certainly does) have bugs, vulnerabilities or some other
    ```
    ![Alter text](https://github.com/ImranHossain00/Simple-Projects-with-JAVA/blob/main/Khoj_The_Search/Khoj-The-Search/src/main/webapp/images/)
 3. Rest Api.
-   ![Alter text](https://github.com/ImranHossain00/Simple-Projects-with-JAVA/blob/main/Khoj_The_Search/Khoj-The-Search/screenshots/khoj_rest_api?raw=true)
-   ![Alter text](https://github.com/ImranHossain00/Simple-Projects-with-JAVA/blob/main/Khoj_The_Search/Khoj-The-Search/screenshots/khoj_signup.jpg?raw=true)
+   ![Alter text](https://github.com/ImranHossain00/Simple-Projects-with-JAVA/blob/main/Khoj_The_Search/Khoj-The-Search/screenshots/khoj_rest_api.jpg?raw=true)
+   ![Alter text](https://github.com/ImranHossain00/Simple-Projects-with-JAVA/blob/main/Khoj_The_Search/Khoj-The-Search/screenshots/khoj_rest_api_1.jpg?raw=true)
 
 
 ## Prerequisites
 What things I have installed in my Device:
 ```
-Tomcat server 8.
+Tomcat server 9.
 Locally installed MySQL.
 Compatible IDE, Intellij IDEA recommended for this project.
 ```
+
+## Database and Tables
+- **Database name:** ``khojTheSearch``
+- **Tables name:** 
+  1. `customer`
+     ![Alter text](https://github.com/ImranHossain00/Simple-Projects-with-JAVA/blob/main/Khoj_The_Search/Khoj-The-Search/screenshots/khoj_database1.jpg?raw=true)
+  2. `user_values`
+     ![Alter text](https://github.com/ImranHossain00/Simple-Projects-with-JAVA/blob/main/Khoj_The_Search/Khoj-The-Search/screenshots/khoj_database2.jpg?raw=true)
+
+
 ## Arrived Quesions
 - **Connection with database failed:** When we try to connect our database with The DataSource object
   it was not working properly. It was showing this error:
