@@ -14,7 +14,7 @@
           action="<c:url value="/home"/>">
         <div class="form-group">
             <label for="inputValues">
-                Input values
+                Input values ( N.B Use only Non-negative Integer numbers )
             </label>
             <input type="text"
                    class="form-control"
@@ -29,7 +29,7 @@
         </div>
         <div class="form-group">
             <label for="searchValue">
-                Search Values
+                Search Values ( N.B Use only Non-negative Integer numbers )
             </label>
             <input type="text"
                    class="form-control"

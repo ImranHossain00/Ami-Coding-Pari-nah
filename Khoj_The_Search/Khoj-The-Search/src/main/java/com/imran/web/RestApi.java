@@ -2,9 +2,8 @@ package com.imran.web;
 
 import com.google.gson.Gson;
 import com.imran.dto.JsonDTO;
-import com.imran.dto.PayloadDTO;
 import com.imran.dto.RestApiDTO;
-import com.imran.repository.JdbcNumberListRepository;
+import com.imran.repository.JDBCNumberListRepository;
 import com.imran.service.RESTApiService;
 import com.imran.service.RESTApiServiceImpl;
 import com.imran.util.ValidationUtil;
@@ -16,15 +15,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.time.LocalDateTime;
-import java.util.Map;
-import java.util.Vector;
 
 @WebServlet(name = "RESTAPI", value = "/api-rest")
 public class RestApi extends HttpServlet {
 
     private RESTApiService restApiService
-            = new RESTApiServiceImpl(new JdbcNumberListRepository());
+            = new RESTApiServiceImpl(new JDBCNumberListRepository());
     @Override
     protected void doGet(HttpServletRequest req,
                          HttpServletResponse resp)

@@ -3,7 +3,6 @@ package com.imran.repository;
 import com.imran.domain.NumberList;
 import com.imran.domain.RESTApi;
 import com.imran.domain.TimeAndDate;
-import com.imran.dto.PayloadDTO;
 import com.imran.jdbc.ConnectionPool;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,7 +14,7 @@ import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.*;
 
-public class JdbcNumberListRepository implements NumberListRepository{
+public class JDBCNumberListRepository implements NumberListRepository{
     private static final Logger LOGGER
             = LoggerFactory.getLogger(JDBCUserRepositoryImpl.class);
     private DataSource dataSource
@@ -23,7 +22,7 @@ public class JdbcNumberListRepository implements NumberListRepository{
 
     private static final String SELECT_VALUES_WITHIN_GIVEN_TIME
             = "select user_id, insert_time, user_values " +
-             " from user_values1 " +
+             " from user_values " +
              " where user_id=? and insert_time between ? and ?";
 
     @Override
@@ -103,7 +102,7 @@ public class JdbcNumberListRepository implements NumberListRepository{
     private static String makeInsertionQuery(int len) {
 
         StringBuilder query = new StringBuilder(
-                "INSERT INTO user_values1 (user_id, insert_time, user_values, version, date_created, date_last_updated)  VALUES ");
+                "INSERT INTO user_values (user_id, insert_time, user_values, version, date_created, date_last_updated)  VALUES ");
 
 
         for (int i = 0; i < len; i++) {

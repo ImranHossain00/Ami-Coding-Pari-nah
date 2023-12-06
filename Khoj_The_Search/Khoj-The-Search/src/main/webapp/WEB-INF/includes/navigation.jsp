@@ -27,8 +27,8 @@
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link"
-                       href="<c:url value="https://github.com/ImranHossain00"/>">
-                        My GitHub
+                       href="<c:url value="/api-rest"/>">
+                        Rest API
                     </a>
                 </li>
                 <c:choose>

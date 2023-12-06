@@ -3,7 +3,7 @@ package com.imran.web;
 
 
 import com.imran.dto.NumberListDTO;
-import com.imran.repository.JdbcNumberListRepository;
+import com.imran.repository.JDBCNumberListRepository;
 import com.imran.service.NumberListService;
 import com.imran.service.NumberListServiceImpl;
 import com.imran.util.SecurityContext;
@@ -16,17 +16,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
 import java.util.Map;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 @WebServlet("/home")
 public class Home extends HttpServlet {
 
     private NumberListService numberListService
-            = new NumberListServiceImpl(new JdbcNumberListRepository());
+            = new NumberListServiceImpl(new JDBCNumberListRepository());
 
     @Override
     protected void doGet(HttpServletRequest req,
