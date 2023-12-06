@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="328259d4-4fa7-4e7f-84c9-4414c5aa01dd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Queries.ddl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4c83d4bd-a512-4e91-b5d5-26367f157d55.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4c83d4bd-a512-4e91-b5d5-26367f157d55.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/khoj_home_after_login.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/screenshots/khoj_home_after_login.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/khoj_home_before_login.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/screenshots/khoj_home_before_login.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/khoj_login.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/screenshots/khoj_login.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/khoj_rest_api.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/screenshots/khoj_rest_api.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/khoj_rest_api_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/screenshots/khoj_rest_api_1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/khoj_signup.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/screenshots/khoj_signup.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imran/repository/JdbcNumberListRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imran/repository/JDBCNumberListRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imran/web/Home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imran/web/Home.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imran/web/RestApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imran/web/RestApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/includes/navigation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/includes/navigation.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="328259d4-4fa7-4e7f-84c9-4414c5aa01dd" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -275,7 +259,7 @@
       <workItem from="1701796381902" duration="22000" />
       <workItem from="1701796565081" duration="2567000" />
       <workItem from="1701842687207" duration="30000" />
-      <workItem from="1701851141642" duration="2675000" />
+      <workItem from="1701851141642" duration="3429000" />
     </task>
     <servers />
   </component>

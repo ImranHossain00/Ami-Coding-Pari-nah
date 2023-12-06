@@ -7,9 +7,9 @@ So, contributions are always welcome :)
 
 In this project there have multiple packages in the [src/main](https://github.com/ImranHossainFakir/Simple-Projects-with-JAVA/tree/main/Khoj_The_Search/Khoj-The-Search/src/main) directory.
 
-1. [java/com/imran]()
-2. [resources]()
-3. [webapp]()
+1. [java/com/imran](#1-javacomimran)
+2. [resources](#2-resources)
+3. [webapp](#3-webapp)
 
 ### 1. java/com/imran
 - `annotations`: Holding customized annotation which is used in `DTO` classes.
