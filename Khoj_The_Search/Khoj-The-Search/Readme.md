@@ -51,6 +51,12 @@ In this project there have multiple packages in the [src/main](https://github.co
    ```
    ![Alter text](https://github.com/ImranHossain00/Simple-Projects-with-JAVA/blob/main/Khoj_The_Search/Khoj-The-Search/screenshots/khoj_input_result.jpg?raw=true)
 3. **Rest Api.**
+   ```md
+   The `REST API` will display input values associated with
+   a specific ID number (not necessarily belonging to the logged-in person) within a specified time range.
+   
+   The response will provide a `JSON` object.
+   ```
    ![Alter text](https://github.com/ImranHossain00/Simple-Projects-with-JAVA/blob/main/Khoj_The_Search/Khoj-The-Search/screenshots/khoj_rest_api.jpg?raw=true)
    ![Alter text](https://github.com/ImranHossain00/Simple-Projects-with-JAVA/blob/main/Khoj_The_Search/Khoj-The-Search/screenshots/khoj_rest_api_1.jpg?raw=true)
 
