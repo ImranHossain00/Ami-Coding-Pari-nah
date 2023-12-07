@@ -1,8 +1,8 @@
 package com.imran.dto;
 
 
-import java.util.List;
-
+// The purpose of this class's object is to create a JsonDTO object.
+// Like display input values for a particular user within a specific time.
 public class PayloadDTO {
     String  timestamp;
     String input_values;

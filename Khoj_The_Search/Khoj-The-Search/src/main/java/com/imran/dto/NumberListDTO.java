@@ -5,6 +5,8 @@ import com.imran.domain.User;
 import javax.validation.constraints.NotEmpty;
 import java.time.LocalDateTime;
 
+// This class retrieve values from home page
+// like input values, search values and user id.
 public class NumberListDTO {
 
     @NotEmpty

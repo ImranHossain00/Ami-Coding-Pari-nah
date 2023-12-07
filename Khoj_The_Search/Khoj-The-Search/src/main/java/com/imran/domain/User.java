@@ -1,5 +1,7 @@
 package com.imran.domain;
 
+
+// This class is used to store data in 'customer' table.
 public class User extends Domain {
     private String username;
     private String password;

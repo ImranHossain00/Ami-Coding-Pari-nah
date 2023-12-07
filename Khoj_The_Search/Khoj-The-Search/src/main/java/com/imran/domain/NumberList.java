@@ -3,6 +3,8 @@ package com.imran.domain;
 import java.time.LocalDateTime;
 import java.util.List;
 
+// This class is mapped to the 'user_values' table
+// This class stores the logged-in user ID, input values, and the insertion time.
 public class NumberList extends Domain {
     private List<Integer> numberList;
     private User user;

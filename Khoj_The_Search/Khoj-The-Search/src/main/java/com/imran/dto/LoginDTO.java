@@ -2,6 +2,7 @@ package com.imran.dto;
 
 import javax.validation.constraints.NotEmpty;
 
+// This class retrieve information from login page.
 public class LoginDTO {
     @NotEmpty
     private String username;

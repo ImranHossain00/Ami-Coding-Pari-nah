@@ -5,6 +5,9 @@ import com.imran.annotations.PasswordEqual;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
+
+// Retrieves data from sign up page
+// The annotation @PasswordEqual is responsible for checking the password equal or not.
 @PasswordEqual(
         first = "password",
         second = "confirmPassword",

@@ -2,6 +2,7 @@ package com.imran.domain;
 
 import java.time.LocalDateTime;
 
+// This object is used to store date and time when retrieving data from the database.
 public class TimeAndDate {
     LocalDateTime time;
     Integer value;

@@ -6,6 +6,8 @@ import java.time.LocalDateTime;
 import java.util.Map;
 import java.util.Vector;
 
+// This class retrieves data from RestApiDTO
+// and passes it to the NumberList class for searching.
 public class RESTApi {
     private Long userId;
     private LocalDateTime startTime;

@@ -2,6 +2,7 @@ package com.imran.domain;
 
 import java.time.LocalDateTime;
 
+// 3 essential columns for an Entity or Domain
 public abstract class Domain {
     private Long id;
     private Long version = 0L;

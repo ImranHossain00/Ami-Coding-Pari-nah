@@ -18,15 +18,15 @@ In this project there have multiple packages in the [src/main](https://github.co
 
 ### 1. java/com/imran
 - `annotations`: Holding customized annotation which is used in `DTO` classes.
-- `domain`: classes/objects to store into the database. 
-- `dto(Data Transfer Object)`: Objects that are responsible show the response result to the client.  
+- `domain`: Classes that store data in the database.
+- `dto(Data Transfer Object)`: Classes or objects handling data communication with the client, sending and receiving information.  
 - `exceptions`: Classes for customized exceptions.
-- `filter`: Object Filtering the every request from the client.
-- `jdbc`: Object which is responsible to create connection with database.
-- `repository`: Objects are responsible for the `CRUD` operations.
+- `filter`: Objects Filtering every request from the client.
+- `jdbc`: ConnectionPool object which is responsible to create connection with database, store connections to the pool.
+- `repository`: Objects which are responsible for the `CRUD` operations.
 - `services`: Business Logics.
 - `util`: Validator Objects.
-- `web`: Servlet objects which are responsible for receiving requests and send responses.
+- `web`: Servlet objects which are responsible for receiving requests and sending responses.
 
 ### 2. resources
 - `db.properties`: In this file, we configure the properties for our database connection.
@@ -45,15 +45,18 @@ In this project there have multiple packages in the [src/main](https://github.co
    ![Alter text](https://github.com/ImranHossain00/Simple-Projects-with-JAVA/blob/main/Khoj_The_Search/Khoj-The-Search/screenshots/khoj_login.jpg?raw=true)
 2. **Searching for one or more integer (non-negative) numbers within a list of integers (non-negative).**
    ```md
-   After logging in, users are redirected to the home page where they can input one or more integer values and specify one or more integer values as search criteria.
-   A button labeled `Khoj` is provided. Upon entering valid input, users can initiate a search to determine whether the search values exist within the provided input values.
+   After logging in, users are redirected to the home page where they can input 
+   one or more integer values and specify one or more integer values as search criteria.
+   A button labeled `Khoj` is provided. Upon entering valid input, users can initiate 
+   a search to determine whether the search values exist within the provided input values.
    The result, either `true` or `false`, will be displayed.
    ```
    ![Alter text](https://github.com/ImranHossain00/Simple-Projects-with-JAVA/blob/main/Khoj_The_Search/Khoj-The-Search/screenshots/khoj_input_result.jpg?raw=true)
 3. **Rest Api.**
    ```md
    The `REST API` will display input values associated with
-   a specific ID number (not necessarily belonging to the logged-in person) within a specified time range.
+   a specific ID number (not necessarily belonging to the logged-in person) within 
+   a specified time range.
    
    The response will provide a `JSON` object.
    ```
@@ -83,8 +86,8 @@ Gradle 7.2 (Build Tool)
 
 
 ## Arrived Quesions
-- **Connection with database failed:** When we try to connect our database with The DataSource object
-  it was not working properly. It was showing this error:
+- **Connection with database failed:** When we try to connect our database with the 
+   DataSource object it was not working properly. It was showing this error:
 
   ![Alter text](https://github.com/ImranHossain00/Simple-Projects-with-JAVA/blob/main/Khoj_The_Search/Khoj-The-Search/screenshots/DatabaseError_1.jpg?raw=true)
 

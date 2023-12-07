@@ -2,6 +2,7 @@ package com.imran.dto;
 
 import java.util.List;
 
+// This class is employed to send a JSON object as a response to the client.
 public class JsonDTO {
     private boolean status;
     private String user_id;

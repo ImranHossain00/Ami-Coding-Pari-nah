@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
-
+// This class is implementation of UserRepository interface.
 public class JDBCUserRepositoryImpl implements UserRepository{
     private static final Logger LOGGER
             = LoggerFactory.getLogger(JDBCUserRepositoryImpl.class);
@@ -35,6 +35,7 @@ public class JDBCUserRepositoryImpl implements UserRepository{
 
 
 
+    // Saving a new user which is signed up..
     @Override
     public void save(User user) {
 
@@ -53,6 +54,7 @@ public class JDBCUserRepositoryImpl implements UserRepository{
         }
     }
 
+    // This is finding an existing user from database.
     @Override
     public Optional<User> findByUsername(String username) {
         List<User> USERS = new ArrayList<>();

@@ -14,6 +14,8 @@ import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.*;
 
+
+// This class is implementation of NumberListRepository interface.
 public class JDBCNumberListRepository implements NumberListRepository{
     private static final Logger LOGGER
             = LoggerFactory.getLogger(JDBCUserRepositoryImpl.class);
@@ -25,10 +27,14 @@ public class JDBCNumberListRepository implements NumberListRepository{
              " from user_values " +
              " where user_id=? and insert_time between ? and ?";
 
+    // Saving user input values in ascending order.
     @Override
     public void save(NumberList list) {
         final String INSERT_NUMBER_LIST = makeInsertionQuery(list.getNumberList().size());
 
+        // using try catch with resources for auto close.
+        // But in this case close() method will store
+        // the connections back to the pool instead close.
         try (var connection = dataSource.getConnection();
              var prstmnt = connection.prepareStatement(INSERT_NUMBER_LIST)){
 
@@ -49,8 +55,12 @@ public class JDBCNumberListRepository implements NumberListRepository{
         }
     }
 
+    // Finding input values which are given by the user in a specific time range.
     @Override
     public Vector<TimeAndDate> findByTimeAndUserId(RESTApi restApi) {
+        // using try catch with resources for auto close.
+        // But in this case close() method will store
+        // the connections back to the pool instead close.
         try (var connection = dataSource.getConnection();
              var prstmt = connection.prepareStatement(SELECT_VALUES_WITHIN_GIVEN_TIME)) {
             prstmt.setLong(1, restApi.getUserId());
@@ -77,6 +87,7 @@ public class JDBCNumberListRepository implements NumberListRepository{
         }
     }
 
+    // Coping the data (time and input values) which are came form the database.
     private Vector <TimeAndDate> extractResultSet(ResultSet resultSet)
             throws SQLException {
 
@@ -99,6 +110,7 @@ public class JDBCNumberListRepository implements NumberListRepository{
         return timesAndDates;
     }
 
+    // For crafting a somewhat complex query for inserting the input values.
     private static String makeInsertionQuery(int len) {
 
         StringBuilder query = new StringBuilder(

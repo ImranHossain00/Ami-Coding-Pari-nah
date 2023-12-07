@@ -6,6 +6,7 @@ import java.time.LocalDateTime;
 import java.util.Map;
 import java.util.Vector;
 
+// Retrieves data from RESTAPI page.
 public class RestApiDTO {
     @NotEmpty
     private String userId;
