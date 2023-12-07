@@ -69,6 +69,7 @@ JDK - 11
 Tomcat server 9.
 Locally installed MySQL.
 Compatible IDE, Intellij IDEA recommended for this project.
+Gradle 7.2 (Build Tool)
 ```
 
 ## Database and Tables
