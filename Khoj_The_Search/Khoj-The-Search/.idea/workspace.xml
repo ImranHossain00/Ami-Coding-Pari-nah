@@ -5,7 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="328259d4-4fa7-4e7f-84c9-4414c5aa01dd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/java/com/imran/domain/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/java/com/imran/jdbc/ConnectionPool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/java/com/imran/util/SecurityContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/java/com/imran/web/FileUpload.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/java/com/imran/web/Home.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/webapp/WEB-INF/fileUpload.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/webapp/WEB-INF/home.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/webapp/WEB-INF/includes/footer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/webapp/WEB-INF/includes/header.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/webapp/WEB-INF/includes/navigation.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/webapp/WEB-INF/tag/functions.tld" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/webapp/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Taka-Poisa/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Taka-Poisa/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Taka-Poisa/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../Taka-Poisa/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Taka-Poisa/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/resources/db.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +93,7 @@
     "database.data.extractors.current.export.id": "Comma-separated (CSV)_id",
     "database.data.extractors.current.id": "Comma-separated (CSV)_id",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/peripatetic/Practice/JavaPractice",
+    "last_opened_file_path": "/home/peripatetic/Project/Simple-Projects-with-JAVA/Taka-Poisa",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -265,6 +282,15 @@
       <workItem from="1701957207548" duration="2041000" />
       <workItem from="1701977908641" duration="4548000" />
       <workItem from="1702011650019" duration="68000" />
+      <workItem from="1702112356302" duration="456000" />
+      <workItem from="1702113003928" duration="276000" />
+      <workItem from="1702114669888" duration="657000" />
+      <workItem from="1702144203629" duration="624000" />
+      <workItem from="1702150727363" duration="71000" />
+      <workItem from="1702189876396" duration="18000" />
+      <workItem from="1702190024718" duration="4448000" />
+      <workItem from="1702197970581" duration="1497000" />
+      <workItem from="1702225503551" duration="695000" />
     </task>
     <servers />
   </component>
