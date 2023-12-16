@@ -77,4 +77,5 @@ public class Signup extends HttpServlet {
         userDTO.setConfirmPassword(req.getParameter("confirmPassword"));
         return userDTO;
     }
+
 }

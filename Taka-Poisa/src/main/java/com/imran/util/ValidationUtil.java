@@ -1,17 +1,19 @@
 package com.imran.util;
 
 
-
 import javax.validation.ConstraintViolation;
 import javax.validation.Validation;
 import javax.validation.Validator;
+import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
+// This is an example of singleton pattern
+public class ValidationUtil {
 
-// This is an example of singleton pattern.
-public final class ValidationUtil {
-    private static final ValidationUtil INSTANCE = new ValidationUtil();
+    private static final ValidationUtil INSTANCE
+            = new ValidationUtil();
     private final Validator validator;
     private ValidationUtil() {
         var validatorFactory = Validation.buildDefaultValidatorFactory();
@@ -22,11 +24,11 @@ public final class ValidationUtil {
         return INSTANCE;
     }
 
-    public <T>Map<String, String> validate(T obj) {
+    public <T>Map<? super Object, String> validate(T obj) {
         var violations = validator.validate(obj);
 
-        // This lamda expression simplify and reduces the code that is given as bellow
-        return violations.stream()
+        return violations
+                .stream()
                 .collect(Collectors.toMap(
                         violation ->
                                 violation.getPropertyPath().toString(),
@@ -34,8 +36,8 @@ public final class ValidationUtil {
                         (eMsg1, eMsg2) -> eMsg1 + " <br/> " + eMsg2
                 ));
 
-//        Map<String, String> errors = new HashMap<>();
-//        for (ConstraintViolation<UserDTO> violation : violations) {
+//        Map<? super Object, String> errors = new HashMap<>();
+//        for (ConstraintViolation<T> violation : violations) {
 //            String path = violation.getPropertyPath().toString();
 //            if (errors.containsKey(path)) {
 //                String eMsg = errors.get(path);

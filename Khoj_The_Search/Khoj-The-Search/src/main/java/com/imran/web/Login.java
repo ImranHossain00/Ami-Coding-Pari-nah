@@ -33,7 +33,7 @@ public class Login extends HttpServlet {
         LOGGER.info("Serving login page");
         String logout = req.getParameter("logout");
 
-        if (logout != null && Boolean.parseBoolean(logout))
+        if (Boolean.parseBoolean(logout))
             req.setAttribute("message", "You have been successfully logged out.");
 
         RequestDispatcher rd

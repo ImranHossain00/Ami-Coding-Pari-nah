@@ -7,5 +7,6 @@
     <link rel="stylesheet" type="text/css"
           href="<c:url
     value="/webjars/bootstrap/4.5.3/css/bootstrap.min.css"/> "/>
+    <link rel="icon" type="image/x-icon" href="../WEB-INF/image/favicon.ico">
 </head>
-<body style="padding-top: 70px">
+<body style="padding-top: 70px; background: black">

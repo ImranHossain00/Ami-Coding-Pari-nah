@@ -5,7 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="328259d4-4fa7-4e7f-84c9-4414c5aa01dd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Taka-Poisa/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Taka-Poisa/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Taka-Poisa/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/java/com/imran/annotations/PasswordEqual.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/java/com/imran/dto/FileUploadDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/java/com/imran/dto/SignupDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/java/com/imran/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/java/com/imran/service/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/java/com/imran/util/PasswordEqualValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/java/com/imran/util/ValidationUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/java/com/imran/web/AddressInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/java/com/imran/web/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/java/com/imran/web/Logout.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/java/com/imran/web/Signup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/webapp/WEB-INF/address.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/webapp/WEB-INF/signup.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4c83d4bd-a512-4e91-b5d5-26367f157d55.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4c83d4bd-a512-4e91-b5d5-26367f157d55.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imran/util/ValidationUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imran/util/ValidationUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imran/web/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imran/web/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imran/web/Signup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imran/web/Signup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Taka-Poisa/src/main/java/com/imran/web/FileUpload.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/java/com/imran/web/NIDInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Taka-Poisa/src/main/webapp/WEB-INF/fileUpload.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Taka-Poisa/src/main/webapp/WEB-INF/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/webapp/WEB-INF/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Taka-Poisa/src/main/webapp/WEB-INF/includes/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/webapp/WEB-INF/includes/footer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Taka-Poisa/src/main/webapp/WEB-INF/includes/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/webapp/WEB-INF/includes/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Taka-Poisa/src/main/webapp/WEB-INF/includes/navigation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/webapp/WEB-INF/includes/navigation.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +47,12 @@
       <state>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Khoj-The-Search" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -67,37 +97,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;database.data.extractors.current.export.id&quot;: &quot;Comma-separated (CSV)_id&quot;,
-    &quot;database.data.extractors.current.id&quot;: &quot;Comma-separated (CSV)_id&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/peripatetic/Project/Simple-Projects-with-JAVA/Taka-Poisa&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Perforce&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "database.data.extractors.current.export.id": "Comma-separated (CSV)_id",
+    "database.data.extractors.current.id": "Comma-separated (CSV)_id",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/peripatetic/Project/Simple-Projects-with-JAVA/Taka-Poisa",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "vcs.Perforce",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.78">
+  <component name="RunManager" selected="Application.Test">
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.imran.Test" />
       <module name="Khoj-The-Search.main" />
@@ -204,6 +235,13 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-11.0.21-corretto-11.0.21-3183f394aec4-585ed96d" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -275,6 +313,12 @@
       <workItem from="1702197970581" duration="1497000" />
       <workItem from="1702225503551" duration="695000" />
       <workItem from="1702238348814" duration="61000" />
+      <workItem from="1702402624869" duration="1796000" />
+      <workItem from="1702439804348" duration="83000" />
+      <workItem from="1702458018445" duration="3032000" />
+      <workItem from="1702486707846" duration="32000" />
+      <workItem from="1702545404970" duration="1483000" />
+      <workItem from="1702575497342" duration="913000" />
     </task>
     <servers />
   </component>
