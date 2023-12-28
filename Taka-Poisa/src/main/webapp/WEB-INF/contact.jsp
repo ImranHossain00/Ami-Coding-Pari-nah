@@ -1,8 +1,9 @@
 <%@include file="includes/header.jsp"%>
 <%@include file="includes/navigation.jsp"%>
 <div class="container col-lg-6">
-    <h1 style="color: #f1ff20">Contact Information</h1>
+    <h1 class="text-info">Contact Information</h1>
     <hr class="mb-4">
+
     <form class="form-horizontal"
           role="form"
           method="post"
@@ -11,7 +12,7 @@
 
         <!-- Address Information -->
         <div class="form-group">
-            <label for="phoneNumber" style="color: floralwhite">Phone Number</label>
+            <label for="phoneNumber">Phone Number</label>
             <input type="text"
                    name="phoneNumber"
                    id="phoneNumber"
@@ -23,7 +24,7 @@
         </div>
 
         <div class="form-group">
-            <label for="email" style="color: floralwhite">Email</label>
+            <label for="email">Email</label>
             <input type="email"
                    name="email"
                    id="email"

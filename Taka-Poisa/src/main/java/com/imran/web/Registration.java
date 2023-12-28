@@ -1,6 +1,9 @@
 package com.imran.web;
 
 import com.imran.dto.RegDTO;
+import com.imran.repositories.JdbcUserRepo;
+import com.imran.service.UserService;
+import com.imran.service.UserServiceImpl;
 import com.imran.util.ValidationUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,6 +19,8 @@ import java.io.IOException;
 public class Registration extends HttpServlet {
     private final static Logger LOGGER
             = LoggerFactory.getLogger(Registration.class);
+    private UserService userService
+            = new UserServiceImpl(new JdbcUserRepo());
 
     @Override
     protected void doPost(HttpServletRequest req,
@@ -34,6 +39,7 @@ public class Registration extends HttpServlet {
                     .forward(req, resp);
         } else {
             LOGGER.info("Redirecting to nid-info page");
+            userService.saveSignupData(regDTO);
             resp.sendRedirect("/nid-info");
         }
     }

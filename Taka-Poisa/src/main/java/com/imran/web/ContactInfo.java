@@ -1,6 +1,9 @@
 package com.imran.web;
 
 import com.imran.dto.ContactDTO;
+import com.imran.repositories.JdbcUserRepo;
+import com.imran.service.UserService;
+import com.imran.service.UserServiceImpl;
 import com.imran.util.ValidationUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,6 +20,8 @@ public class ContactInfo extends HttpServlet {
 
     private static final Logger LOGGER
             = LoggerFactory.getLogger(ContactInfo.class);
+    private UserService userService
+            = new UserServiceImpl(new JdbcUserRepo());
 
     @Override
     protected void doGet(HttpServletRequest req,
@@ -43,6 +48,7 @@ public class ContactInfo extends HttpServlet {
         }
         else {
             LOGGER.info("Information is saved");
+            userService.saveContactData(contactDTO);
             resp.sendRedirect("/home");
         }
     }

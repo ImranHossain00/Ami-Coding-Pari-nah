@@ -2,8 +2,9 @@
 <%@include file="includes/navigation.jsp"%>
 
 <div class="container col-lg-6">
-    <h1 style="color: #f1ff20">Address</h1>
+    <h1 class="text-info">Address</h1>
     <hr class="mb-4">
+
     <form class="form-horizontal"
           role="form"
           method="post"
@@ -12,7 +13,7 @@
 
         <!-- Address Information -->
         <div class="form-group">
-            <label for="road" style="color: floralwhite">Road</label>
+            <label for="road">Road</label>
             <input type="text"
                    name="road"
                    id="road"
@@ -24,7 +25,7 @@
         </div>
 
         <div class="form-group">
-            <label for="thana" style="color: floralwhite">Thana</label>
+            <label for="thana">Thana</label>
             <input type="text"
                    name="thana"
                    id="thana"
@@ -36,7 +37,7 @@
         </div>
 
         <div class="form-group">
-            <label for="district" style="color: floralwhite">District</label>
+            <label for="district">District</label>
             <input type="text"
                    name="district"
                    id="district"
@@ -48,7 +49,7 @@
         </div>
 
         <div class="form-group">
-            <label for="division" style="color: floralwhite">Division</label>
+            <label for="division">Division</label>
             <input type="text"
                    name="division"
                    id="division"

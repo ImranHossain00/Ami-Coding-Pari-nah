@@ -5,32 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="328259d4-4fa7-4e7f-84c9-4414c5aa01dd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../Taka-Poisa/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/java/com/imran/annotations/PasswordEqual.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/java/com/imran/dto/FileUploadDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/java/com/imran/dto/SignupDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/java/com/imran/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/java/com/imran/service/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/java/com/imran/util/PasswordEqualValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/java/com/imran/util/ValidationUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/java/com/imran/web/AddressInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/java/com/imran/web/Login.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/java/com/imran/web/Logout.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/java/com/imran/web/Signup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/webapp/WEB-INF/address.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/webapp/WEB-INF/signup.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4c83d4bd-a512-4e91-b5d5-26367f157d55.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4c83d4bd-a512-4e91-b5d5-26367f157d55.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imran/util/ValidationUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imran/util/ValidationUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imran/web/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imran/web/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imran/web/Signup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imran/web/Signup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Taka-Poisa/src/main/java/com/imran/web/FileUpload.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/java/com/imran/web/NIDInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Taka-Poisa/src/main/webapp/WEB-INF/fileUpload.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/signup.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Taka-Poisa/src/main/java/com/imran/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/java/com/imran/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Taka-Poisa/src/main/webapp/WEB-INF/address.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/webapp/WEB-INF/address.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Taka-Poisa/src/main/webapp/WEB-INF/contact.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/webapp/WEB-INF/contact.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Taka-Poisa/src/main/webapp/WEB-INF/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/webapp/WEB-INF/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Taka-Poisa/src/main/webapp/WEB-INF/includes/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/webapp/WEB-INF/includes/footer.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Taka-Poisa/src/main/webapp/WEB-INF/includes/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/webapp/WEB-INF/includes/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Taka-Poisa/src/main/webapp/WEB-INF/includes/navigation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/webapp/WEB-INF/includes/navigation.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Taka-Poisa/src/main/webapp/WEB-INF/nidInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/webapp/WEB-INF/nidInfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Taka-Poisa/src/main/webapp/WEB-INF/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Taka-Poisa/src/main/webapp/WEB-INF/signup.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +90,7 @@
     "database.data.extractors.current.id": "Comma-separated (CSV)_id",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/peripatetic/Project/Simple-Projects-with-JAVA/Taka-Poisa",
+    "last_opened_file_path": "/home/peripatetic/Practice/JavaPractice",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -319,6 +302,11 @@
       <workItem from="1702486707846" duration="32000" />
       <workItem from="1702545404970" duration="1483000" />
       <workItem from="1702575497342" duration="913000" />
+      <workItem from="1703495255454" duration="479000" />
+      <workItem from="1703533317830" duration="3534000" />
+      <workItem from="1703580428355" duration="3886000" />
+      <workItem from="1703610071976" duration="2556000" />
+      <workItem from="1703664008995" duration="123000" />
     </task>
     <servers />
   </component>

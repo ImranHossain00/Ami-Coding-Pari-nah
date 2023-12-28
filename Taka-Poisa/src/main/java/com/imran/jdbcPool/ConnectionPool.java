@@ -1,4 +1,4 @@
-package com.imran.jdbc;
+package com.imran.jdbcPool;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
@@ -19,7 +19,7 @@ public class ConnectionPool {
     }
 
     // to create connection
-    public DataSource getConnection() {
+    public DataSource getDatasource() {
         // We utilize the ResourceBundle class
         // for convenient access to data from the db.properties file.
         var dbProp = ResourceBundle.getBundle("db");

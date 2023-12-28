@@ -8,5 +8,10 @@
           href="<c:url
     value="/webjars/bootstrap/4.5.3/css/bootstrap.min.css"/> "/>
     <link rel="icon" type="image/x-icon" href="../WEB-INF/image/favicon.ico">
+    <style>
+        label {
+            color: rgb(0, 0, 0);
+        }
+    </style>
 </head>
-<body style="padding-top: 70px; background: black">
+<body style="padding-top: 70px;">

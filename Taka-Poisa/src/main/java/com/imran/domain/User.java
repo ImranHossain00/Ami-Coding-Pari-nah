@@ -1,4 +1,83 @@
 package com.imran.domain;
 
-public class User {
+import java.io.InputStream;
+
+public class User extends Domain{
+
+    private String firstName;
+    private String lastName;
+    private String accountNo;
+    private String accountPassword;
+    private InputStream photo;
+    private byte[] image;
+    private String base64Image;
+
+    public User() {}
+    public User(String firstName,
+                String lastName,
+                String accountNo,
+                String accountPassword,
+                String base64Image) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.accountNo = accountNo;
+        this.accountPassword = accountPassword;
+        this.base64Image = base64Image;
+    }
+
+    public InputStream getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(InputStream photo) {
+        this.photo = photo;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getAccountNo() {
+        return accountNo;
+    }
+
+    public void setAccountNo(String accountNo) {
+        this.accountNo = accountNo;
+    }
+
+    public String getAccountPassword() {
+        return accountPassword;
+    }
+
+    public void setAccountPassword(String accountPassword) {
+        this.accountPassword = accountPassword;
+    }
+
+    public byte[] getImage() {
+        return image;
+    }
+
+    public void setImage(byte[] image) {
+        this.image = image;
+    }
+
+    public String getBase64Image() {
+        return base64Image;
+    }
+
+    public void setBase64Image(String base64Image) {
+        this.base64Image = base64Image;
+    }
 }

@@ -1,5 +1,6 @@
 package com.imran.web;
 
+import com.imran.repositories.JdbcUserRepo;
 import com.imran.service.UserService;
 import com.imran.service.UserServiceImpl;
 import org.slf4j.Logger;
@@ -18,7 +19,7 @@ public class Signup extends HttpServlet {
     private final static Logger LOGGER
             = LoggerFactory.getLogger(Signup.class);
     private UserService userService
-            = new UserServiceImpl();
+            = new UserServiceImpl(new JdbcUserRepo());
     @Override
     protected void doGet(HttpServletRequest req,
                          HttpServletResponse resp)

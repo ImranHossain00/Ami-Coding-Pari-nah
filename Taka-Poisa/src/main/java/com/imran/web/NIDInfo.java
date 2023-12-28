@@ -1,6 +1,7 @@
 package com.imran.web;
 
 import com.imran.dto.NIDInfoDTO;
+import com.imran.repositories.JdbcUserRepo;
 import com.imran.service.UserService;
 import com.imran.service.UserServiceImpl;
 import com.imran.util.ValidationUtil;
@@ -23,7 +24,7 @@ public class NIDInfo extends HttpServlet {
     private static final Logger LOGGER
             = LoggerFactory.getLogger(NIDInfo.class);
     private UserService userService
-            = new UserServiceImpl();
+            = new UserServiceImpl(new JdbcUserRepo());
 
     @Override
     protected void doGet(HttpServletRequest req,
@@ -49,9 +50,9 @@ public class NIDInfo extends HttpServlet {
             req.setAttribute("dto", nidDTO);
             req.getRequestDispatcher("/WEB-INF/nidInfo.jsp")
                     .forward(req, resp);
-
         } else {
             LOGGER.info("Nid info got. Redirecting to address info");
+            userService.saveNidData(nidDTO);
             resp.sendRedirect("/address-info");
         }
     }
