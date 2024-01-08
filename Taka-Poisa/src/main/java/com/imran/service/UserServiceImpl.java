@@ -1,19 +1,22 @@
 package com.imran.service;
 
 import com.imran.domain.User;
-import com.imran.dto.AddressDTO;
-import com.imran.dto.ContactDTO;
-import com.imran.dto.NIDInfoDTO;
-import com.imran.dto.RegDTO;
+import com.imran.dto.*;
+import com.imran.exceptions.UserNotFoundException;
 import com.imran.repositories.UserRepo;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.UUID;
-import java.util.stream.Stream;
+import java.sql.SQLException;
+import java.util.Optional;
 
 public class UserServiceImpl implements UserService{
+
+    private static final Logger LOGGER
+            = LoggerFactory.getLogger(UserServiceImpl.class);
     private UserRepo repository;
 
     public UserServiceImpl(UserRepo repository) {
@@ -21,27 +24,31 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public User saveSignupData(RegDTO dto) {
+    public void signup(SignupDTO dto) {
         var user = new User();
         user.setFirstName(dto.getFirstName());
         user.setLastName(dto.getLastName());
-        user.setAccountPassword(encryptPassword(dto.getPassword()));
-        user.setAccountNo(Stream.generate(UUID::randomUUID).toString());
-        return user;
+        user.setEmail(dto.getEmail());
+        user.setLoginPassword(encryptPassword(dto.getPassword()));
+
+        LOGGER.info("Going to repo to insert user data");
+        repository.insertUser(user);
     }
 
+    // Returns true if email is unique.
     @Override
-    public User saveNidData(NIDInfoDTO dto) {
-
+    public boolean isEmailUnique(String email) {
+        // Email is not found so email is unique.
+        return repository.findByEmail(email) == null;
     }
 
-    @Override
-    public User saveAddressData(AddressDTO dto) {
-
-    }
 
     @Override
-    public User saveContactData(ContactDTO dto) {
+    public User verifyEmailAndPassword(LoginDTO dto) throws UserNotFoundException {
+
+        return Optional.ofNullable(repository.findByEmail(dto.getEmail()))
+                .filter(user -> user.getLoginPassword().equals(encryptPassword(dto.getPassword())))
+                .orElseThrow(() -> new UserNotFoundException("Password/Email is incorrect"));
 
     }
 

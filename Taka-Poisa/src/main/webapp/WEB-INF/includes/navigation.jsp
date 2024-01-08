@@ -38,7 +38,7 @@
                         <form style="visibility: hidden"
                               id="fileUpload"
                               method="post"
-                              action="<c:url value="/file-upload"/>">
+                              action="<c:url value="/file_upload"/>">
                         </form>
                     </c:when>
                     <c:otherwise>
@@ -52,7 +52,7 @@
                     <c:when test="${sec:isAuthenticated(pageContext.request)}">
                         <a class="nav-link" href="#" onclick="logout()">
                             Log Out
-                            [${sec:getCurrentUser(pageContext.request).username}]
+                            [${sec:getCurrentUser(pageContext.request).firstName}]
                         </a>
                         <script>
                             function logout() {

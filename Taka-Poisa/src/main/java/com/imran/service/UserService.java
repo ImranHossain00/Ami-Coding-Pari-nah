@@ -1,14 +1,19 @@
 package com.imran.service;
 
 import com.imran.domain.User;
-import com.imran.dto.AddressDTO;
-import com.imran.dto.ContactDTO;
-import com.imran.dto.NIDInfoDTO;
-import com.imran.dto.RegDTO;
+import com.imran.dto.*;
+import com.imran.exceptions.UserNotFoundException;
+
+import java.sql.SQLException;
+import java.util.Optional;
 
 public interface UserService {
-    User saveSignupData(RegDTO dto);
-    User saveNidData(NIDInfoDTO dto);
-    User saveAddressData(AddressDTO dto);
-    User saveContactData(ContactDTO dto);
+
+    // Strategy how to save signup data in the database.
+    void signup(SignupDTO dto);
+
+    // If email is present then it will return false otherwise true.
+    boolean isEmailUnique(String email);
+
+    User verifyEmailAndPassword(LoginDTO dto) throws UserNotFoundException, SQLException;
 }

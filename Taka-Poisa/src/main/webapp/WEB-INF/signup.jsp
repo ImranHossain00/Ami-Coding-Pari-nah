@@ -7,7 +7,7 @@
 
     <form class="form-horizontal"
           role="form"
-          action="<c:url value="/registration"/>"
+          action="<c:url value="/signup"/>"
           method="post">
         <div class="form-group">
             <label for="firstName">First Name</label>
@@ -27,6 +27,16 @@
                    name="lastName"/>
             <c:if test="${errors.lastName != null}">
                 <small class="text-danger"> ${errors.lastName} </small>
+            </c:if>
+        </div>
+        <div class="form-group">
+            <label for="email" >Email</label>
+            <input type="email" class="form-control"
+                   id="email"
+                   name="email"
+                   value="${dto.email}"/>
+            <c:if test="${errors.email != null}">
+                <small class="text-danger"> ${errors.email} </small>
             </c:if>
         </div>
         <div class="form-group">
@@ -55,7 +65,7 @@
         <div class="form-group">
             <button class="btn btn-primary btn-lg"
                     type="submit">
-                Next
+                Sign up
             </button>
         </div>
     </form>

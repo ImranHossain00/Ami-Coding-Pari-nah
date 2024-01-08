@@ -6,6 +6,8 @@ public class User extends Domain{
 
     private String firstName;
     private String lastName;
+    private String email;
+    private String loginPassword;
     private String accountNo;
     private String accountPassword;
     private InputStream photo;
@@ -13,6 +15,14 @@ public class User extends Domain{
     private String base64Image;
 
     public User() {}
+
+    public User(String firstName, String lastName, String email, String loginPassword) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.loginPassword = loginPassword;
+    }
+
     public User(String firstName,
                 String lastName,
                 String accountNo,
@@ -23,6 +33,22 @@ public class User extends Domain{
         this.accountNo = accountNo;
         this.accountPassword = accountPassword;
         this.base64Image = base64Image;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getLoginPassword() {
+        return loginPassword;
+    }
+
+    public void setLoginPassword(String loginPassword) {
+        this.loginPassword = loginPassword;
     }
 
     public InputStream getPhoto() {

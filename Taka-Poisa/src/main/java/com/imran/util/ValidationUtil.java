@@ -4,12 +4,10 @@ package com.imran.util;
 import javax.validation.ConstraintViolation;
 import javax.validation.Validation;
 import javax.validation.Validator;
-import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 import java.util.stream.Collectors;
 
-// This is an example of singleton pattern
+// This is an example of singleton pattern.
 public class ValidationUtil {
 
     private static final ValidationUtil INSTANCE
@@ -24,7 +22,7 @@ public class ValidationUtil {
         return INSTANCE;
     }
 
-    public <T>Map<? super Object, String> validate(T obj) {
+    public <T>Map<String, String> validate(T obj) {
         var violations = validator.validate(obj);
 
         return violations
