@@ -59,11 +59,11 @@ Gradle 7.2 (Build Tool)
     
 
 ## Errors
-**During logged in URL links are not working**: It seems like there might be an issue with 
+- **During logged in URL links are not working**: It seems like there might be an issue with 
 the URL links when users are logged in. When attempting to send a request
 with a URL such as http://localhost:8080/home, the page appears blank.<br>
 ![image](https://github.com/ImranHossainFakir/Simple-Projects-with-JAVA/blob/main/Taka-Poisa/screenshots/blank_signup_page.png?raw=true)
-<br>I identified an issue where `username` was mistakenly typed instead of `firstName` on line number 50 in the `navigation.jsp` page.<br>
+<br>I identified an issue where `username` was mistakenly typed instead of `firstName` on line number 55 in the `navigation.jsp` page.<br>
 ![image](https://github.com/ImranHossainFakir/Simple-Projects-with-JAVA/blob/main/Taka-Poisa/screenshots/blank_page_sol_1_in_nav_page.png?raw=true)
 <br>But another problem has arisen. The conundrum is that displaying 
 the `firstName` of logged-in `user` in the right upper side behind the `Log out`
@@ -74,4 +74,5 @@ When attempting to find a `user` with a given `email` using the `findByEmail()`
 method in the repository class, the `user` object is initialized only with 
 `email` and `login_password`. To address this, a new constructor has been 
 created to initialize a `user` with `User(firstName, lastName, email, login_password)`.
+Now we can get the `firstName` of the `user`.
 
