@@ -65,14 +65,16 @@ with a URL such as http://localhost:8080/home, the page appears blank.<br>
 ![image](https://github.com/ImranHossainFakir/Simple-Projects-with-JAVA/blob/main/Taka-Poisa/screenshots/blank_signup_page.png?raw=true)
 <br>I identified an issue where `username` was mistakenly typed instead of `firstName` on line number 55 in the `navigation.jsp` page.<br>
 ![image](https://github.com/ImranHossainFakir/Simple-Projects-with-JAVA/blob/main/Taka-Poisa/screenshots/blank_page_sol_1_in_nav_page.png?raw=true)
-<br>But another problem has arisen. The conundrum is that displaying 
-the `firstName` of logged-in `user` in the right upper side behind the `Log out`
-button. but it was not working, and it was look like the following picture<br>
-![image](https://github.com/ImranHossainFakir/Simple-Projects-with-JAVA/blob/main/Taka-Poisa/screenshots/logout_username_error.png?raw=true)
-<br>It seems that the issue is related to the initialization of the `user` object.
-When attempting to find a `user` with a given `email` using the `findByEmail()` 
-method in the repository class, the `user` object is initialized only with 
-`email` and `login_password`. To address this, a new constructor has been 
-created to initialize a `user` with `User(firstName, lastName, email, login_password)`.
-Now we can get the `firstName` of the `user`.
+<br>
+- **User's firstName not displaying near logout button**:The conundrum is that displaying
+  the `firstName` of logged-in `user` in the right upper side behind the `Log out`
+  button, but it was not working, and it was look like the following picture<br>
+  ![image](https://github.com/ImranHossainFakir/Simple-Projects-with-JAVA/blob/main/Taka-Poisa/screenshots/logout_username_error.png?raw=true)
+  <br>It seems that the issue is related to the initialization of the `user` object.
+  When attempting to find a `user` with a given `email` using the `findByEmail()`
+  method in the repository class, the `user` object is initialized only with
+  `email` and `login_password`. The `firstName` instance value of the `user` object is instantiated with the default  value(`null`), due to the existing issue necessitating corrections in the implementation.
+  <br>To address this issue, a new constructor has been
+  created to initialize a `user` with `User(firstName, lastName, email, login_password)`.
+  Now we can get the `firstName` of the `user`.
 
