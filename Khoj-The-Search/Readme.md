@@ -7,10 +7,10 @@ So, contributions are always welcome :)
 
 I attempted to implement this small project using the principles of `Object-Oriented Programming (OOP)`.
 Specifically, I applied the concept of `Loosely Coupled` design by utilizing interfaces. 
-I also applied the concept of `Singleton Pattern` in [ValidationUtil](https://github.com/ImranHossainFakir/Simple-Projects-with-JAVA/blob/main/Khoj_The_Search/Khoj-The-Search/src/main/java/com/imran/util/ValidationUtil.java) class. Each interface is designed to handle a single, specific task.
+I also applied the concept of `Singleton Pattern` in [ValidationUtil](https://github.com/ImranHossainFakir/Simple-Projects-with-JAVA/blob/main/Khoj-The-Search/src/main/java/com/imran/util/ValidationUtil.java) class. Each interface is designed to handle a single, specific task.
 However, the implementation may not fully adhere to `OOP` principles. 
 
-In this project there have multiple packages in the [src/main](https://github.com/ImranHossainFakir/Simple-Projects-with-JAVA/tree/main/Khoj_The_Search/Khoj-The-Search/src/main) directory.
+In this project there have multiple packages in the [src/main](https://github.com/ImranHossainFakir/Simple-Projects-with-JAVA/tree/main/Khoj-The-Search/src/main) directory.
 
 1. [java/com/imran](#1-javacomimran)
 2. [resources](#2-resources)
@@ -41,8 +41,8 @@ In this project there have multiple packages in the [src/main](https://github.co
    Users can create an account by providing a unique username and password. Subsequently,
    they can log in using the established credentials.
    ```
-   ![Alter text](https://github.com/ImranHossain00/Simple-Projects-with-JAVA/blob/main/Khoj_The_Search/Khoj-The-Search/screenshots/khoj_signup.jpg?raw=true)
-   ![Alter text](https://github.com/ImranHossain00/Simple-Projects-with-JAVA/blob/main/Khoj_The_Search/Khoj-The-Search/screenshots/khoj_login.jpg?raw=true)
+   ![Alter text](https://github.com/ImranHossain00/Simple-Projects-with-JAVA/blob/main/Khoj-The-Search/screenshots/khoj_signup.jpg?raw=true)
+   ![Alter text](https://github.com/ImranHossain00/Simple-Projects-with-JAVA/blob/main/Khoj-The-Search/screenshots/khoj_login.jpg?raw=true)
 2. **Searching for one or more integer (non-negative) numbers within a list of integers (non-negative).**
    ```md
    After logging in, users are redirected to the home page where they can input 
@@ -51,7 +51,7 @@ In this project there have multiple packages in the [src/main](https://github.co
    a search to determine whether the search values exist within the provided input values.
    The result, either `true` or `false`, will be displayed.
    ```
-   ![Alter text](https://github.com/ImranHossain00/Simple-Projects-with-JAVA/blob/main/Khoj_The_Search/Khoj-The-Search/screenshots/khoj_input_result.jpg?raw=true)
+   ![Alter text](https://github.com/ImranHossain00/Simple-Projects-with-JAVA/blob/main/Khoj-The-Search/screenshots/khoj_input_result.jpg?raw=true)
 3. **Rest Api.**
    ```md
    The `REST API` will display input values associated with
@@ -60,8 +60,8 @@ In this project there have multiple packages in the [src/main](https://github.co
    
    The response will provide a `JSON` object.
    ```
-   ![Alter text](https://github.com/ImranHossain00/Simple-Projects-with-JAVA/blob/main/Khoj_The_Search/Khoj-The-Search/screenshots/khoj_rest_api.jpg?raw=true)
-   ![Alter text](https://github.com/ImranHossain00/Simple-Projects-with-JAVA/blob/main/Khoj_The_Search/Khoj-The-Search/screenshots/khoj_rest_api_1.jpg?raw=true)
+   ![Alter text](https://github.com/ImranHossain00/Simple-Projects-with-JAVA/blob/main/Khoj-The-Search/screenshots/khoj_rest_api.jpg?raw=true)
+   ![Alter text](https://github.com/ImranHossain00/Simple-Projects-with-JAVA/blob/main/Khoj-The-Search/screenshots/khoj_rest_api_1.jpg?raw=true)
 
 
 ## Prerequisites
@@ -76,19 +76,19 @@ Gradle 7.2 (Build Tool)
 ```
 
 ## Database and Tables
-**The database and table creation queries are provided in [Queries.ddl](https://github.com/ImranHossainFakir/Simple-Projects-with-JAVA/blob/main/Khoj_The_Search/Khoj-The-Search/Queries.ddl).**
+**The database and table creation queries are provided in [Queries.ddl](https://github.com/ImranHossainFakir/Simple-Projects-with-JAVA/blob/main/Khoj-The-Search/Queries.ddl).**
 - **Database name:** ``khojTheSearch``
 - **Tables name:** 
   1. `customer`
-     ![Alter text](https://github.com/ImranHossain00/Simple-Projects-with-JAVA/blob/main/Khoj_The_Search/Khoj-The-Search/screenshots/khoj_database1.jpg?raw=true)
+     ![Alter text](https://github.com/ImranHossain00/Simple-Projects-with-JAVA/blob/main/Khoj-The-Search/screenshots/khoj_database1.jpg?raw=true)
   2. `user_values`
-     ![Alter text](https://github.com/ImranHossain00/Simple-Projects-with-JAVA/blob/main/Khoj_The_Search/Khoj-The-Search/screenshots/khoj_database2.jpg?raw=true)
+     ![Alter text](https://github.com/ImranHossain00/Simple-Projects-with-JAVA/blob/main/Khoj-The-Search/screenshots/khoj_database2.jpg?raw=true)
 
 
 ## Arrived Quesions
 - **Connection with database failed:** When we try to connect our database with the 
    DataSource object it was not working properly. It was showing this error:
 
-  ![Alter text](https://github.com/ImranHossain00/Simple-Projects-with-JAVA/blob/main/Khoj_The_Search/Khoj-The-Search/screenshots/DatabaseError_1.jpg?raw=true)
+  ![Alter text](https://github.com/ImranHossain00/Simple-Projects-with-JAVA/blob/main/Khoj-The-Search/screenshots/DatabaseError_1.jpg?raw=true)
 
   When we used `Connection Pool` from the Library `HikariCP` it is now working as much as good.
