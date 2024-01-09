@@ -1,5 +1,5 @@
 # There have some projects using Java
-### 1. [Khoj The Search](https://github.com/ImranHossain00/Simple-Projects-with-JAVA/tree/main/Khoj_The_Search/Khoj-The-Search)
+### 1. [Khoj The Search](https://github.com/ImranHossain00/Simple-Projects-with-JAVA/tree/main/Khoj-The-Search)
 This simple project is a system where users can create accounts with unique usernames
 and passwords, log in, and access a home page. On the home page, users can input
 integer values and set search criteria. A "Khoj" button allows them 
