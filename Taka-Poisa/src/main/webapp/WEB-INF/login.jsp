@@ -39,5 +39,12 @@
             </button>
         </div>
     </form>
+    <div class="row">
+        <c:if test="${message != null}">
+            <div class="alert alert-success">
+                    ${message}
+            </div>
+        </c:if>
+    </div>
 </div>
 <%@include file="includes/footer.jsp"%>

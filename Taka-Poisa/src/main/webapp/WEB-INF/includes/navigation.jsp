@@ -51,8 +51,7 @@
                 <c:choose>
                     <c:when test="${sec:isAuthenticated(pageContext.request)}">
                         <a class="nav-link" href="#" onclick="logout()">
-                            Log Out
-                            [${sec:getCurrentUser(pageContext.request).firstName}]
+                            Log out[${sec:getCurrentUser(pageContext.request).firstName} ${sec:getCurrentUser(pageContext.request).lastName}]
                         </a>
                         <script>
                             function logout() {

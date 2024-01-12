@@ -4,6 +4,7 @@ import com.imran.domain.User;
 import com.imran.dto.*;
 import com.imran.exceptions.UserNotFoundException;
 
+import javax.servlet.http.HttpServletRequest;
 import java.sql.SQLException;
 import java.util.Optional;
 
@@ -16,4 +17,6 @@ public interface UserService {
     boolean isEmailUnique(String email);
 
     User verifyEmailAndPassword(LoginDTO dto) throws UserNotFoundException, SQLException;
+
+    void logout(HttpServletRequest req);
 }

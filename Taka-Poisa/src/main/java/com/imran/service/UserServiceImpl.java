@@ -4,9 +4,11 @@ import com.imran.domain.User;
 import com.imran.dto.*;
 import com.imran.exceptions.UserNotFoundException;
 import com.imran.repositories.UserRepo;
+import com.imran.util.SecurityContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.servlet.http.HttpServletRequest;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -50,6 +52,11 @@ public class UserServiceImpl implements UserService{
                 .filter(user -> user.getLoginPassword().equals(encryptPassword(dto.getPassword())))
                 .orElseThrow(() -> new UserNotFoundException("Password/Email is incorrect"));
 
+    }
+
+    @Override
+    public void logout(HttpServletRequest req) {
+        SecurityContext.logout(req);
     }
 
     private String encryptPassword(String password) {
